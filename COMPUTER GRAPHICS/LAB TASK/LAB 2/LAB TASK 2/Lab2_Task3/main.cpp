@@ -20,53 +20,95 @@
 
 whenever the window needs to be re-painted. */
 
-void batman_logo(){
+
+void batman_logo_1(){
+
 glColor3f(0.0f, 0.0f, 0.0f);
 glBegin(GL_POLYGON); // Each set of 4 vertices form a quad
 
 
+glVertex2f(-1.5, 4.8);
+glVertex2f(-6.2, 4.8);
 
-glVertex2f(0.0f, -1.0f); // x, y
-glVertex2f(2.5f, 2.4f); // x, y
+glVertex2f(-5.6, 4.6);
+glVertex2f(-5.2, 4.4);
+glVertex2f(-4.8, 4.2);
+glVertex2f(-4.6, 4);
+glVertex2f(-4.4, 3.6);
+glVertex2f(-4.4, 2.9);
+glVertex2f(-3.4, 2.7);
+glVertex2f(-2.6, 2.5);
+glVertex2f(-2.1, 2.2);
+glVertex2f(-1.7, 1.9);
+glVertex2f(-1.4, 1.6);
+glVertex2f(-1.1, 1.2);
+glVertex2f(-0.9, 0.9);
+glVertex2f(-0.75, 0.6);
+glVertex2f(-0.6, 0.35);
+glVertex2f(-0.4, 0);
 
-glVertex2f(2.8f, 2.7f); // x, y
-glVertex2f(4.6f, 2.8f); // x, y
-glVertex2f(4.5f, 3.0f); // x, y
-glVertex2f(4.5f, 3.5f); // x, y
-glVertex2f(4.8f, 4.2f); // x, y
-glVertex2f(6.2f, 4.8f); // x, y
-glVertex2f(1.5f, 4.8f); // x, y
-glVertex2f(1.5f, 4.2f); // x, y
-glVertex2f(1.4f, 3.8f); // x, y
-glVertex2f(1.25f, 3.6f); // x, y
-glVertex2f(1.0f, 3.5f); // x, y
-glVertex2f(0.78f, 3.8f); // x, y
-glVertex2f(0.6f, 4.6f); // x, y
-glVertex2f(0.6f, 4.6f); // x, y
-glVertex2f(0.4f, 3.8f); // x, y
-glVertex2f(0.0f, 3.9f); // x, y
-glVertex2f(-0.4f, 3.8f); // x, y
-glVertex2f(-0.6f, 4.6f); // x, y
-glVertex2f(-0.83f, 3.82f); // x, y
-glVertex2f(-1.0f, 3.5f); // x, y
-glVertex2f(-1.25f, 3.6f); // x, y
-glVertex2f(-1.4f, 3.8f); // x, y
-glVertex2f(-1.5f, 4.2f); // x, y
-glVertex2f(-1.5f, 4.8f); // x, y
-glVertex2f(-6.4f, 4.8f); // x, y
-glVertex2f(-4.8f, 4.2f); // x, y
-glVertex2f(-4.5f, 3.5f); // x, y
-glVertex2f(-4.5f, 3.0f); // x, y
-glVertex2f(-4.6f, 2.8f); // x, y
-glVertex2f(-2.8f, 2.7f); // x, y
-//glVertex2f(-2.5f, 2.4f); // x, y
+glVertex2f(0, -1);
+
+glVertex2f(0.4, 0);
+glVertex2f(0.4, 0);
+glVertex2f(0.6, 0.35);
+glVertex2f(0.75, 0.6);
+glVertex2f(0.9, 0.9);
+glVertex2f(1.1, 1.2);
+glVertex2f(1.4, 1.6);
+glVertex2f(1.7, 1.9);
+glVertex2f(2.1, 2.2);
+glVertex2f(2.6, 2.5);
+glVertex2f(3.4, 2.7);
+glVertex2f(4.4, 2.9);
+glVertex2f(4.4, 3.6);
+glVertex2f(4.6, 4);
+glVertex2f(4.8, 4.2);
+glVertex2f(5.2, 4.4);
+glVertex2f(5.6, 4.6);
+glVertex2f(6.2, 4.8);
+glVertex2f(1.5, 4.8);
 
 
 glEnd();
 
+}
+
+void logo_extension(){
 
 
+glColor3f(1.0f, 1.0f, 1.0f);
+glBegin(GL_POLYGON);
 
+glVertex2f(0, 4.8);
+glVertex2f(0, 3.9);
+glVertex2f(-0.4, 3.8);
+glVertex2f(-0.6, 4.6);
+glVertex2f(-0.78, 3.8);
+glVertex2f(-1, 3.5);
+glVertex2f(-1.25, 3.6);
+glVertex2f(-1.4, 3.8);
+glVertex2f(-1.5, 4.2);
+glVertex2f(-1.5, 4.8);
+
+glEnd();
+
+glColor3f(1.0f, 1.0f, 1.0f);
+glBegin(GL_POLYGON);
+
+glVertex2f(0, 4.8);
+glVertex2f(0, 3.9);
+glVertex2f(0.4, 3.8);
+glVertex2f(0.6, 4.6);
+glVertex2f(0.78, 3.8);
+glVertex2f(1, 3.5);
+glVertex2f(1.25, 3.6);
+glVertex2f(1.4, 3.8);
+glVertex2f(1.5, 4.2);
+glVertex2f(1.5, 4.8);
+
+
+glEnd();
 }
 
 
@@ -79,24 +121,24 @@ glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer (background)
 
 glLineWidth(2.5);
 
-batman_logo();
+batman_logo_1();
+logo_extension();
+
 glFlush(); // Render now
 
 }
-
-
 
 /* Main function: GLUT runs as a console application starting at main() */
 
 int main(int argc, char** argv) {
 
 glutInit(&argc, argv); // Initialize GLUT
-glutInitWindowSize(820, 520); // Set the window's initial width & height
+glutInitWindowSize(820, 420); // Set the window's initial width & height
 
 glutCreateWindow("OpenGL Setup Test"); // Create a window with the given title
 
 
-gluOrtho2D(-7, +7,-3, +6);
+gluOrtho2D(-7, +6.5,-1.5, +5.5);
 
 glutDisplayFunc(display); // Register display callback handler for window re-paint
 
