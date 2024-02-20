@@ -877,3 +877,8 @@
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glu.h
 	<GL/gl.h>
 
+1708449239 source:e:\spring 23-24\computer graphics\mid\lab task\lab 3\lab3_task_4\main.cpp
+	<math.h>
+	<windows.h>
+	<GL/glut.h>
+
