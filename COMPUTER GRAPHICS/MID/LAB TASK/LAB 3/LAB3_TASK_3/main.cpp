@@ -116,6 +116,180 @@ glEnd();
 
 }
 
+void outline_tree(){
+
+glColor3f(0, 0, 0);
+glLineWidth(1.5);
+glBegin(GL_LINES);
+
+glVertex2f(-140, -65);
+glVertex2f(-162, -83);
+
+glVertex2f(-162, -83);
+glVertex2f(-108, -83);
+
+glVertex2f(-108, -83);
+glVertex2f(-120, -65);
+
+glVertex2f(-120, -65);
+glVertex2f(-120, 24.5);
+
+glVertex2f(-120, 24.5);
+glVertex2f(-107.7, 35);
+
+glVertex2f(-107.7, 35);
+glVertex2f(-113.7, 42);
+
+glVertex2f(-113.7, 42);
+glVertex2f(-119.7, 37);
+
+glVertex2f(-119.7, 37);
+glVertex2f(-119.7, 61);
+
+glVertex2f(-119.7, 61);
+glVertex2f(-131.7, 61);
+
+glVertex2f(-131.7, 61);
+glVertex2f(-131.7, 43);
+
+glVertex2f(-131.7, 43);
+glVertex2f(-140.2, 50.6);
+
+glVertex2f(-140.2, 50.6);
+glVertex2f(-144.7, 42);
+
+glVertex2f(-144.7, 42);
+glVertex2f(-140, 37);
+
+glVertex2f(-140, 37);
+glVertex2f(-140, 24.5);
+
+glVertex2f(-140, 24.5);
+glVertex2f(-140, -65);
+
+
+//round green leafs
+
+glVertex2f(-140, 30.5);
+glVertex2f(-152.5, 17.5);
+
+glVertex2f(-152.5, 17.5);
+glVertex2f(-168, 16.5);
+
+glVertex2f(-168, 16.5);
+glVertex2f(-179, 27);
+
+glVertex2f(-179, 27);
+glVertex2f(-180, 40);
+
+glVertex2f(-180, 40);
+glVertex2f(-189, 44);
+
+glVertex2f(-189, 44);
+glVertex2f(-197.2, 53.4);
+
+glVertex2f(-197.2, 53.4);
+glVertex2f(-200.2, 68);
+
+glVertex2f(-200.2, 68);
+glVertex2f(-197.5,80.5);
+
+glVertex2f(-197.5,80.5);
+glVertex2f(-192.5,87.5);
+
+glVertex2f(-192.5,87.5);
+glVertex2f(-184.3,91.3);
+
+glVertex2f(-184.3,91.3);
+glVertex2f(-182.6,101.1);
+
+glVertex2f(-182.6,101.1);
+glVertex2f(-176,109);
+
+glVertex2f(-176,109);
+glVertex2f(-166,111.5);
+
+glVertex2f(-166,111.5);
+glVertex2f(-155.8,111.85 );
+
+glVertex2f(-155.8,111.85 );
+glVertex2f(-150.8,110.2 );
+
+glVertex2f(-150.8,110.2 );
+glVertex2f(-145.4,109.2 );
+
+glVertex2f(-145.4,109.2 );
+glVertex2f(-140.4,114 );
+
+glVertex2f(-140.4,114 );
+glVertex2f(-129.8,117.6 );
+
+glVertex2f(-129.8,117.6 );
+glVertex2f(-119.05,117.35 );
+
+glVertex2f(-119.05,117.35 );
+glVertex2f(-111.1,113.7 );
+
+glVertex2f(-111.1,113.7 );
+glVertex2f(-104.4,106.2 );
+
+glVertex2f(-104.4,106.2 );
+glVertex2f(-100,100 );
+
+glVertex2f(-100,100 );
+glVertex2f(-92,100.6 );
+
+glVertex2f(-92,100.6 );
+glVertex2f(-82,97.4 );
+
+glVertex2f(-82,97.4 );
+glVertex2f(-76.1,88.8);
+
+glVertex2f(-76.1,88.8);
+glVertex2f(-76,78.8);
+
+glVertex2f(-76,78.8);
+glVertex2f(-78.45, 71.9);
+
+glVertex2f(-78.45, 71.9);
+glVertex2f(-73.6, 67.8);
+
+glVertex2f(-73.6, 67.8);
+glVertex2f(-70.2, 61.4);
+
+glVertex2f(-70.2, 61.4);
+glVertex2f(-71, 51);
+
+glVertex2f(-71, 51);
+glVertex2f(-75.86, 43.68);
+
+glVertex2f(-75.86, 43.68);
+glVertex2f(-73.04, 37.78);
+
+glVertex2f(-73.04, 37.78);
+glVertex2f(-70, 30);
+
+glVertex2f(-70, 30);
+glVertex2f(-73, 19);
+
+glVertex2f(-73, 19);
+glVertex2f(-85, 8.5);
+
+glVertex2f(-85, 8.5);
+glVertex2f(-99, 7.2);
+
+glVertex2f(-99, 7.2);
+glVertex2f(-112, 10);
+
+glVertex2f(-112, 10);
+glVertex2f(-120, 16.5);
+//glVertex2f(-120, 24.5);
+
+
+glEnd();
+
+}
+
 void outlilne(){
 glColor3f(0, 0, 0);
 glLineWidth(1.5);
@@ -903,18 +1077,18 @@ glEnd();
 
 
 
-void circle()
+void moon()
 {
     glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
-	for(int i=0;i<200;i++)
+	for(int i=0;i<360;i++)
         {
-            glColor3f(0.0,0.0,0.7);
+            glColor3f(1,1,1);
             float pi=3.1416;
-            float A=(i*2*pi)/200;
-            float r=1.794373412;;
+            float A=(i*2*pi)/360;
+            float r=29.739;
             float x = r * cos(A);
             float y = r * sin(A);
-            glVertex2f(x,y);
+            glVertex2f(x + 160,y + 200);
         }
 
     //glVertex2f(0.3f,0.4f);
@@ -927,16 +1101,18 @@ void circle()
 
 void display() {
 
-glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+glClearColor(0.0f, 0.0f, 0.5f, 1.0f);
 
 glClear(GL_COLOR_BUFFER_BIT);
 
 soil_effect();
 tree();
+outline_tree();
 building();
 outlilne();
 lampPost();
 bench();
+moon();
 
 
 glFlush(); // Render now
