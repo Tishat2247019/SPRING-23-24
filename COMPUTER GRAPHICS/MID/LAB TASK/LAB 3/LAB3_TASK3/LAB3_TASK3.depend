@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1708362822 source:e:\spring 23-24\computer graphics\lab task\lab 3\lab3_task_4\main.cpp
+1708702387 source:e:\spring 23-24\computer graphics\mid\lab task\lab 3\lab3_task3\main.cpp
 	<math.h>
 	<windows.h>
 	<GL/glut.h>
@@ -876,14 +876,4 @@
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glu.h
 	<GL/gl.h>
-
-1708449239 source:e:\spring 23-24\computer graphics\mid\lab task\lab 3\lab3_task_4\main.cpp
-	<math.h>
-	<windows.h>
-	<GL/glut.h>
-
-1708700706 source:e:\spring 23-24\computer graphics\mid\lab task\lab 3\lab3_task_3\main.cpp
-	<math.h>
-	<windows.h>
-	<GL/glut.h>
 
