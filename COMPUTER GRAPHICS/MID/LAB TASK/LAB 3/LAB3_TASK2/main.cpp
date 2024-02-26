@@ -292,10 +292,10 @@ glFlush(); // Render now
 
 int main(int argc, char** argv) {
 
-glutInitWindowSize(600, 600); // Set the window's initial width & height
+glutInitWindowSize(500, 700); // Set the window's initial width & height
 glutInit(&argc, argv); // Initialize GLUT
-glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH)-600)/2,
-                       (glutGet(GLUT_SCREEN_HEIGHT)-600)/2);
+glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH)-500)/2,
+                       (glutGet(GLUT_SCREEN_HEIGHT)-700)/2);
 glutCreateWindow("OpenGL Setup"); // Create a window with the given title
 
 
