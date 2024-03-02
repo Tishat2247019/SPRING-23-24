@@ -22,7 +22,7 @@ delta=(max(x1)-min(x1))/L;
 
 % Quantization
 Quantized_Signal = min(x1)+(round((x1-min(x1))/delta)).*delta;
-
+Quantization_Error = abs(x1 - Quantized_Signal);
 
 subplot(2,2,1)
 plot(t, x1)
