@@ -15,11 +15,8 @@ fs = 4000; % Sampling frequency
 t = 0:1/fs:1-1/fs; % Time duration
 x = A1*sin(2 * pi * (C*100) * t ) + A2*cos(2*pi*(G*100) * t) + s*randn(size(t)); %composite signal
 
-powfund = A1^2/2 + A2^2/2;
-varnoise = s^2;
-%noise
-noise = s*randn(size(x));
 
-%noisy signal
-noisySignal = x  + noise;
-SNR = snr(noisySignal) %Calculation of SNR using snr function
+bandwidth = obw(x,fs); % Bandwidth of the signal
+L=2; % Level of the signal
+BitRate = 2*bandwidth*log2(L)
+L = 2.^(BitRate/(2*bandwidth)) %Signal level to achieve data rate
