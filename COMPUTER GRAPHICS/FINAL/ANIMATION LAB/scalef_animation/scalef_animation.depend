@@ -1,8 +1,13 @@
 # depslib dependency file v1.0
-1711781746 source:e:\spring 23-24\computer graphics\mid\lab task\lab 4\village_night\main.cpp
-	<windows.h>
+1711782114 source:e:\spring 23-24\computer graphics\final\animation lab\scalef_animation\main.cpp
+	<iostream>
+	<GL/gl.h>
 	<GL/glut.h>
-	<math.h>
+	<windows.h>
+
+1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\gl.h
+	<windows.h>
+	<stddef.h>
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\windows.h
 	<_mingw.h>
@@ -867,13 +872,6 @@
 	<GL/glu.h>
 	<stdlib.h>
 
-1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\gl.h
-	<windows.h>
-	<stddef.h>
-
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glu.h
 	<GL/gl.h>
-
-1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\math.h
-	<crtdefs.h>
 

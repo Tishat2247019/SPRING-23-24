@@ -674,14 +674,8 @@ glClearColor(0.0f, 0.6f,0.90f, 1.0f); // Set background color to black and opaqu
 
 glClear(GL_COLOR_BUFFER_BIT);
 
-glMatrixMode(GL_MODELVIEW);
-    glPushMatrix();
-    /*Transalation*/
-    //glTranslatef(0.0f, 0.0f, 0.0f);
-    /*Rotation*/
-	//glRotatef(200,0.0f, 0.0f, 1.0f);
-	/*Scaling*/
-	glScalef(2.0f, 4.0f, 0.0f);
+
+
 night_sky();
 moon();
 two_hills();
@@ -693,7 +687,9 @@ house_2();
 boat();
 glFlush(); // Render now
 
-glPopMatrix();
+
+
+
 }
 
 /* Main function: GLUT runs as a console application starting at main() */

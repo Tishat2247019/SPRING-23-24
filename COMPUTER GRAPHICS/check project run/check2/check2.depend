@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1711781746 source:e:\spring 23-24\computer graphics\mid\lab task\lab 4\village_night\main.cpp
+1711475350 source:e:\spring 23-24\computer graphics\check project run\check2\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	<math.h>
