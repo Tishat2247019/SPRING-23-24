@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1711781230 source:e:\spring 23-24\computer graphics\final\animation lab\animation_translation\main.cpp
+1712506041 source:e:\spring 23-24\computer graphics\final\animation lab\animation_translation\main.cpp
 	<iostream>
 	<GL/gl.h>
 	<GL/glut.h>

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1711783023 source:e:\spring 23-24\computer graphics\final\lab task\lab task 5\question 1\two_boxes_opposite\main.cpp
+1712308560 source:e:\spring 23-24\computer graphics\final\lab task\lab task 5\question 1\two_boxes_opposite\main.cpp
 	<iostream>
 	<GL/gl.h>
 	<GL/glut.h>
