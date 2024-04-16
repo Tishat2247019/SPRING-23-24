@@ -1,21 +1,24 @@
 #include <iostream>
 #include<GL/gl.h>
 #include <GL/glut.h>
+#include<math.h>
 using namespace std;
 
 
 
 float _move = 0.0f;
 float _move1 = 0.0f;
-
+void flood_cirlce();
 int state1 = 1;
 int state2 = 2;
+
+
 void drawScene() {
 glClear(GL_COLOR_BUFFER_BIT);
 glColor3d(1,0,0);
+
 glLoadIdentity(); //Reset the drawing perspective
 glMatrixMode(GL_MODELVIEW);
-
 
 glPushMatrix();
 
@@ -51,6 +54,7 @@ glPopMatrix();
 
 glutSwapBuffers();
 }
+
 
 
 //for object 1
