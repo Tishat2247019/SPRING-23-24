@@ -1,144 +1,147 @@
-#include <iostream>
-#include<GL/gl.h>
+#include<cstdio>
+
+#include <GL/gl.h>
 #include <GL/glut.h>
-#include<math.h>
-using namespace std;
 
 
+GLfloat position = 0.0f;
+GLfloat position1 = 0.0f;
+GLfloat speed = 0.1f;
+void dis();
+void display();
 
-float _move = 0.0f;
-float _move1 = 0.0f;
-void flood_cirlce();
-int state1 = 1;
-int state2 = 2;
-
-
-void drawScene() {
-glClear(GL_COLOR_BUFFER_BIT);
-glColor3d(1,0,0);
-
-glLoadIdentity(); //Reset the drawing perspective
-glMatrixMode(GL_MODELVIEW);
-
-glPushMatrix();
-
-
-glTranslatef(_move,0.0f,  0.0f); // for bottom to up movement
-glBegin(GL_POLYGON);
-glVertex2f(0.6f, 1.0f);
-glVertex2f(0.6f, 0.8f);
-glVertex2f(0.8f, 0.8f);
-glVertex2f(0.8f, 1.0f);
-
-glEnd();
-glPopMatrix();
-
-
-
- glPushMatrix();
-
-
-//glTranslatef(0.0f,_move1,  0.0f); // for bottom to up movement
-glBegin(GL_POLYGON);
-glVertex2f(-0.8f, -0.8f);
-glVertex2f(-0.8f, -1.0f);
-glVertex2f(-0.6f, -1.0f);
-glVertex2f(-0.6f, -0.8f);
-
-glEnd();
-glPopMatrix();
-
-
-
-
-
-glutSwapBuffers();
-}
-
-
-
-//for object 1
 void update(int value) {
 
-switch(state1){
+    if(position <-1.5)
+        position = 1.0f;
+
+    position -= speed;
+
+	glutPostRedisplay();
 
 
-
-    case 1:
-if (_move < 0.2){
-    _move += 0.03;
-}
-else{
-    state1 = -1;
-}
-break;
-
-    case -1:
-if (_move > -1.6 ){
-    _move  -= 0.03;
-}
-else {
-    state1  = 1;
-}
-break;
-
-
+	glutTimerFunc(100,update,0);
 }
 
-/* _move -= .02;
-if(_move < -2)
-{
-_move = 0.0f;
-}*/
-glutPostRedisplay();
-glutTimerFunc(20, update, 0);
-}
 
-//for animation bottom to up
 void update1(int value) {
 
-switch(state2){
+    if(position1 >1.0)
+        position1 = -1.0f;
 
-    case 2:
-if (_move1 > 0.0){
-    _move1 -= 0.03;
-}
-else{
-    state2 = -2;
-}
-break;
+    position1 += speed;
 
-    case -2:
-if (_move1 < 1.8 ){
-    _move1  += 0.03;
-}
-else {
-    state2  = 2;
-}
-break;
+	glutPostRedisplay();
 
 
+	glutTimerFunc(100,update1,0);
 }
-  /*_move1 += .02;
-if(_move1 > 2)
+
+void init() {
+   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+}
+
+void disback(int val)
 {
-_move1 = 0.0f;
-}*/
-glutPostRedisplay();
-glutTimerFunc(20, update1, 0);
+    glutDisplayFunc(display);
+}
+void display5()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glPushMatrix();
+glTranslatef(0.0f,position, 0.0f);
+   glBegin(GL_QUADS);
+      glColor3f(0.0f, 0.0f, 1.0f);
+      glVertex2f(-0.2f, -0.2f);
+      glVertex2f( 0.2f, -0.2f);
+      glVertex2f( 0.2f,  0.2f);
+      glVertex2f(-0.2f,  0.2f);
+   glEnd();
+   glPopMatrix();
+   //glutTimerFunc(1500,disback,0);
+   glFlush();
+
+}
+
+void display4(int val) {
+
+ glutDisplayFunc(display5);
+
+
 }
 
 
+
+void display3()
+{
+    glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glPushMatrix();
+glTranslatef(position1,0.0f, 0.0f);
+   glBegin(GL_QUADS);
+      glColor3f(0.0f, 1.0f, 0.0f);
+      glVertex2f(-0.2f, -0.2f);
+      glVertex2f( 0.2f, -0.2f);
+      glVertex2f( 0.2f,  0.2f);
+      glVertex2f(-0.2f,  0.2f);
+   glEnd();
+   glPopMatrix();
+   glutTimerFunc(1500,display4,0);
+   glFlush();
+}
+
+void display2(int val) {
+
+ glutDisplayFunc(display3);
+
+
+}
+void display() {
+   glClear(GL_COLOR_BUFFER_BIT);
+   glLoadIdentity();
+
+
+
+glPushMatrix();
+glTranslatef(position,0.0f, 0.0f);
+   glBegin(GL_QUADS);
+      glColor3f(1.0f, 0.0f, 0.0f);
+      glVertex2f(-0.2f, -0.2f);
+      glVertex2f( 0.2f, -0.2f);
+      glVertex2f( 0.2f,  0.2f);
+      glVertex2f(-0.2f,  0.2f);
+   glEnd();
+   glBegin(GL_TRIANGLES);
+   glColor3f(0.0f, 0.0f, 1.0f);
+   glVertex2f(0.2f,-0.2f);
+   glVertex2f(0.5f, 0.0f);
+   glVertex2f(0.2f, 0.2f);
+   glEnd();
+
+glPopMatrix();
+
+glutTimerFunc(1500,display2,0);
+glFlush();
+
+}
+
+void dis()
+{
+       glutDisplayFunc(display);
+}
 
 int main(int argc, char** argv) {
-glutInit(&argc, argv);
-glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
-glutInitWindowSize(800, 800);
-glutCreateWindow("Transformation");
-//gluOrtho2D(-2,2,-2,2);
-glutDisplayFunc(drawScene);
-glutTimerFunc(20, update, 0); //Add a timer
-glutTimerFunc(20, update1, 0); //Add a timer
-glutMainLoop();
-return 0;
+   glutInit(&argc, argv);
+   glutInitWindowSize(320, 320);
+   glutInitWindowPosition(50, 50);
+   glutCreateWindow("Translation Animation");
+   glutDisplayFunc(dis);
+   init();
+
+   glutTimerFunc(100, update, 0);
+     glutTimerFunc(100, update1, 0);
+   glutMainLoop();
+   return 0;
 }
+

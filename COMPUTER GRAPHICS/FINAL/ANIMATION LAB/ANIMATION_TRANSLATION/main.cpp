@@ -64,6 +64,7 @@ glutPostRedisplay();
 glutTimerFunc(20, update, 0);
 }
 
+
 //for animation bottom to up
 void update1(int value) {
 

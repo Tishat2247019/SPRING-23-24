@@ -66,10 +66,7 @@ glPopMatrix();
 void box1move(int value) {
 
 switch(state1){
-
-
-
-    case 1:
+  case 1:
 if (_move < 4.0){
     _move += 0.4;
 }
@@ -93,6 +90,7 @@ break;
 glutPostRedisplay();
 glutTimerFunc(20, box1move, 0);
 }
+
 
 //for animation bottom to up
 void  box2move(int value) {
@@ -123,7 +121,73 @@ break;
 glutPostRedisplay();
 glutTimerFunc(20, box2move, 0);
 }
+void box1()
 
+{
+
+glMatrixMode(GL_MODELVIEW);
+glPushMatrix();
+
+glBegin(GL_QUADS);
+glVertex2f(-0.8f, 1.0f);
+glVertex2f(-0.8f, 0.8f);
+glVertex2f(-0.6f, 0.8f);
+glVertex2f(-0.6f, 1.0f);
+
+glEnd();
+glPopMatrix();
+
+}
+
+void box2(){
+
+glMatrixMode(GL_MODELVIEW);
+ glPushMatrix();
+glBegin(GL_QUADS);
+glVertex2f(-0.8f, -0.8f);
+glVertex2f(-0.8f, -1.0f);
+glVertex2f(-0.6f, -1.0f);
+glVertex2f(-0.6f, -0.8f);
+
+glEnd();
+glPopMatrix();
+
+
+}
+
+void box3(){
+glMatrixMode(GL_MODELVIEW);
+glPushMatrix();
+
+glBegin(GL_QUADS);
+glVertex2f(0.6f, -0.8f);
+glVertex2f(0.6f, -1.0f);
+glVertex2f(0.8f,-1.0f);
+glVertex2f(-0.8f, -0.8f);
+
+glEnd();
+glPopMatrix();
+
+}
+
+void box4(){
+glMatrixMode(GL_MODELVIEW);
+
+
+glPushMatrix();
+
+
+
+glBegin(GL_QUADS);
+glVertex2f(0.6f, 1.0f);
+glVertex2f(0.6f, 0.8f);
+glVertex2f(0.8f, 0.8f);
+glVertex2f(0.8f, 1.0f);
+
+glEnd();
+glPopMatrix();
+
+}
 
 void display() {
 
@@ -131,8 +195,10 @@ glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
 glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
 
-BOX1();
-BOX2();
+//BOX1();
+//BOX2();
+
+box1();
 
 glFlush(); // Render now
 
@@ -152,10 +218,10 @@ glutInitWindowPosition(50, 50); // Position the window's initial top-left corner
 
 glutDisplayFunc(display); // Register callback handler for window re-paint event
 
-gluOrtho2D(0,+11,0,+10);
+//gluOrtho2D(0,+11,0,+10);
 
-glutTimerFunc(20, box1move, 0);
-glutTimerFunc(20, box2move, 0);
+//glutTimerFunc(20, box1move, 0);
+//glutTimerFunc(20, box2move, 0);
 
 
 glutMainLoop(); // Enter the event-processing loop

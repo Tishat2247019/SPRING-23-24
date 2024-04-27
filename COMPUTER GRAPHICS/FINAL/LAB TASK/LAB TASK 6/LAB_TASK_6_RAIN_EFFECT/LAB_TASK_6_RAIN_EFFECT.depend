@@ -1,11 +1,8 @@
 # depslib dependency file v1.0
-1713161561 source:e:\spring 23-24\computer graphics\final\lab task\lab task 6\lab_task_6_rain_effect\main.cpp
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<math.h>
-	<GL/gl.h>
+1713978158 source:e:\spring 23-24\computer graphics\final\lab task\lab task 6\lab_task_6_rain_effect\main.cpp
 	<GL/glut.h>
+	<cstdlib>
+	<ctime>
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\gl.h
 	<windows.h>

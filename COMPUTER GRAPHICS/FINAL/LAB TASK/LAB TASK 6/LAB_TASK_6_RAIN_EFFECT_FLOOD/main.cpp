@@ -82,7 +82,7 @@ glutTimerFunc(20, flood_animtion, 0); // 60 FPS
 
 void flood_circle() {
     glPushMatrix();
-    glTranslatef(winWidth / 2, -50, 0.0); // Translate to the center of the window
+   glTranslatef(winWidth / 2, -50, 0.0); // Translate to the center of the window
     glColor3f(0.0, 0.0, 1.0); // Set color to blue
     glScalef(3.3, 1, 0);
 

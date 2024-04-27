@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1712684517 source:e:\spring 23-24\computer graphics\final\project practice\practice2\main.cpp
+1713984006 source:e:\spring 23-24\computer graphics\final\project practice\practice2\main.cpp
 	<windows.h>
 	<iostream>
 	<GL/glut.h>

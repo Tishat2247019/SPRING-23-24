@@ -1029,8 +1029,7 @@ glMatrixMode(GL_MODELVIEW);
    // glTranslatef(-1,0, 0.0f); // Move
    else
    //glTranslatef( -0.04,0.04, 0.0f);
-   move_car = true;
-
+  move_car = true;
 
 
 back_jungles();
