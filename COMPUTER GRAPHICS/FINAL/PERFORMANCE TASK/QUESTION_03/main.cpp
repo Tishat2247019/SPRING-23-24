@@ -515,6 +515,16 @@ glColor3f(1,0,0);
 glBegin(GL_POLYGON);
 
 glVertex2f(-112, -6);
+glVertex2f(-20.9157, -7.1699);
+glVertex2f(-37, -3);
+glVertex2f(-20, 0);
+glVertex2f(-140, 0);
+
+glEnd();
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
 glVertex2f(-124, -10);
 glVertex2f(-107.407, -14.42457);
 glVertex2f(-20.261, -15.13021);
@@ -527,6 +537,29 @@ glEnd();
 }
 
 void lava_ground03(){
+
+    glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
+glVertex2f(-20.9157, -7.1699);
+glVertex2f(-37, -3);
+glVertex2f(-20, 0);
+glVertex2f(-140, 0);
+
+glEnd();
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
+glVertex2f(-124, -10);
+glVertex2f(-107.407, -14.42457);
+glVertex2f(-20.261, -15.13021);
+glVertex2f(-32, -12);
+glVertex2f(-20.9157, -7.1699);
+
+
+glEnd();
 
 glColor3f(1,0,0);
 glBegin(GL_POLYGON);
@@ -546,6 +579,45 @@ glEnd();
 }
 void lava_ground04(){
 
+        glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
+glVertex2f(-20.9157, -7.1699);
+glVertex2f(-37, -3);
+glVertex2f(-20, 0);
+glVertex2f(-140, 0);
+
+glEnd();
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
+glVertex2f(-124, -10);
+glVertex2f(-107.407, -14.42457);
+glVertex2f(-20.261, -15.13021);
+glVertex2f(-32, -12);
+glVertex2f(-20.9157, -7.1699);
+
+
+glEnd();
+
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-70, -26);
+glVertex2f(-116, -20);
+glVertex2f(-94, -18);
+glVertex2f(-107.407, -14.42457);
+glVertex2f(-20.261, -15.13021);
+glVertex2f(-2, -20);
+glVertex2f(-23, -22);
+glVertex2f(-9.6083, -27.261019);
+
+
+glEnd();
+
+
 glColor3f(1,0,0);
 glBegin(GL_POLYGON);
 
@@ -556,6 +628,78 @@ glVertex2f(-9.6083, -27.261019);
 glVertex2f(5, -33);
 glVertex2f(7, -33);
 
+
+glEnd();
+
+}
+
+void lava_ground05(){
+
+
+
+        glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
+glVertex2f(-20.9157, -7.1699);
+glVertex2f(-37, -3);
+glVertex2f(-20, 0);
+glVertex2f(-140, 0);
+
+glEnd();
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-112, -6);
+glVertex2f(-124, -10);
+glVertex2f(-107.407, -14.42457);
+glVertex2f(-20.261, -15.13021);
+glVertex2f(-32, -12);
+glVertex2f(-20.9157, -7.1699);
+
+
+glEnd();
+
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-70, -26);
+glVertex2f(-116, -20);
+glVertex2f(-94, -18);
+glVertex2f(-107.407, -14.42457);
+glVertex2f(-20.261, -15.13021);
+glVertex2f(-2, -20);
+glVertex2f(-23, -22);
+glVertex2f(-9.6083, -27.261019);
+
+
+glEnd();
+
+
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-48, -34);
+glVertex2f(-98, -28);
+glVertex2f(-70, -26);
+glVertex2f(-9.6083, -27.261019);
+glVertex2f(5, -33);
+glVertex2f(7, -33);
+
+
+glEnd();
+
+glColor3f(1,0,0);
+glBegin(GL_POLYGON);
+
+glVertex2f(-34.2587728720317, -39.9923795772674);
+glVertex2f(-78, -36);
+glVertex2f(-48, -34);
+glVertex2f(-7, -33);
+glVertex2f(5, -40);
+glVertex2f(-10, -40);
+glVertex2f(-20, -50);
+glVertex2f(-62, -44);
 
 glEnd();
 
@@ -574,11 +718,13 @@ int count_ground = 1;
 }*/
 
 void lava_animation(int value) {
-    if (max_lava_ground < 4) {
+    /*if (max_lava_ground < 5) {
         max_lava_ground++; // Increment max_lava_ground until all lava grounds are displayed
-    }
+    }*/
+    max_lava_ground++;
+    cout << max_lava_ground<< endl;
     glutPostRedisplay();
-    glutTimerFunc(200, lava_animation, 0);
+    glutTimerFunc(300, lava_animation, 0);
 }
 
 
@@ -628,7 +774,7 @@ default:
     break;
     }
 
-    if (ok){
+    if (state>6){
      /*switch (count_ground) {
     case 1:
         lava_ground01();
@@ -646,8 +792,8 @@ default:
         lava_ground04(); // This will be executed when count_ground is out of range
         break;
 }*/
- for (int i = 1; i <= max_lava_ground; ++i) {
-        switch (i) {
+ //for (int i = 1; i <= max_lava_ground; ++i) {
+        switch (max_lava_ground) {
             case 1:
                 lava_ground01();
                 break;
@@ -660,14 +806,17 @@ default:
             case 4:
                 lava_ground04();
                 break;
+            case 5:
+                lava_ground05();
+                break;
             default:
-                lava_ground04(); // This will be executed when max_lava_ground is out of range
+                lava_ground05(); // This will be executed when max_lava_ground is out of range
                 break;
         }
     }
 
 
-    }
+   // }
 
     river();
 
@@ -685,7 +834,7 @@ int main(int argc, char** argv) {
 
 	//glutTimerFunc(20, flood, 0);
 	glutTimerFunc(200, change_lava, 0);
-	glutTimerFunc(200, lava_animation, 0);
+	glutTimerFunc(300, lava_animation, 0);
 
 	glutMainLoop();           // Enter the event-processing loop
 	return 0;

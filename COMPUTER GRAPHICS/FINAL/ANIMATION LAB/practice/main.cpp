@@ -1,147 +1,117 @@
-#include<cstdio>
-
-#include <GL/gl.h>
+#include <iostream>
+#include<GL/gl.h>
 #include <GL/glut.h>
+using namespace std;
 
 
-GLfloat position = 0.0f;
-GLfloat position1 = 0.0f;
-GLfloat speed = 0.1f;
-void dis();
-void display();
+float scale = 1;
+float scalex = 1;
+float _movey2 = 0;
+float _movex  = 0;
 
-void update(int value) {
-
-    if(position <-1.5)
-        position = 1.0f;
-
-    position -= speed;
-
-	glutPostRedisplay();
-
-
-	glutTimerFunc(100,update,0);
-}
-
-
-void update1(int value) {
-
-    if(position1 >1.0)
-        position1 = -1.0f;
-
-    position1 += speed;
-
-	glutPostRedisplay();
-
-
-	glutTimerFunc(100,update1,0);
-}
-
-void init() {
-   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-}
-
-void disback(int val)
-{
-    glutDisplayFunc(display);
-}
-void display5()
-{
-    glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glPushMatrix();
-glTranslatef(0.0f,position, 0.0f);
-   glBegin(GL_QUADS);
-      glColor3f(0.0f, 0.0f, 1.0f);
-      glVertex2f(-0.2f, -0.2f);
-      glVertex2f( 0.2f, -0.2f);
-      glVertex2f( 0.2f,  0.2f);
-      glVertex2f(-0.2f,  0.2f);
-   glEnd();
-   glPopMatrix();
-   //glutTimerFunc(1500,disback,0);
-   glFlush();
-
-}
-
-void display4(int val) {
-
- glutDisplayFunc(display5);
-
-
-}
-
-
-
-void display3()
-{
-    glClear(GL_COLOR_BUFFER_BIT);
-    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-    glPushMatrix();
-glTranslatef(position1,0.0f, 0.0f);
-   glBegin(GL_QUADS);
-      glColor3f(0.0f, 1.0f, 0.0f);
-      glVertex2f(-0.2f, -0.2f);
-      glVertex2f( 0.2f, -0.2f);
-      glVertex2f( 0.2f,  0.2f);
-      glVertex2f(-0.2f,  0.2f);
-   glEnd();
-   glPopMatrix();
-   glutTimerFunc(1500,display4,0);
-   glFlush();
-}
-
-void display2(int val) {
-
- glutDisplayFunc(display3);
-
-
-}
-void display() {
-   glClear(GL_COLOR_BUFFER_BIT);
-   glLoadIdentity();
-
-
-
+void lava(){
 glPushMatrix();
-glTranslatef(position,0.0f, 0.0f);
-   glBegin(GL_QUADS);
-      glColor3f(1.0f, 0.0f, 0.0f);
-      glVertex2f(-0.2f, -0.2f);
-      glVertex2f( 0.2f, -0.2f);
-      glVertex2f( 0.2f,  0.2f);
-      glVertex2f(-0.2f,  0.2f);
-   glEnd();
-   glBegin(GL_TRIANGLES);
-   glColor3f(0.0f, 0.0f, 1.0f);
-   glVertex2f(0.2f,-0.2f);
-   glVertex2f(0.5f, 0.0f);
-   glVertex2f(0.2f, 0.2f);
-   glEnd();
+
+glTranslatef(_movex, _movey2, 0);
+glScalef(scalex,scale, 0);
+glColor3f(1, 0, 0);
+glBegin(GL_POLYGON);
+
+//glVertex2f(-80, 48);
+glVertex2f(-90, 50);
+glVertex2f(-100, 40);
+glVertex2f(-95, 35);
+glVertex2f(-90, 40);
+glVertex2f(-85, 35);
+glVertex2f(-80, 40);
+glVertex2f(-75, 35);
+glVertex2f(-70, 40);
+glVertex2f(-65, 35);
+glVertex2f(-60, 40);
+glVertex2f(-70, 50);
+
+glEnd();
 
 glPopMatrix();
 
-glutTimerFunc(1500,display2,0);
-glFlush();
+}
+
+int state = 1;
+void animation_lava(int value){
+switch(state){
+case 1:
+if (scale < 6){
+    scale += 0.05;
+scalex += 0.01;
+_movey2 -= 2.5;
+_movex += 0.9;
+}
+else
+    state = 2;
+break;
+
+case 2:
+if(scale > 3){
+      scale -= 0.05;
+    scalex -= 0.01;
+    _movey2 += 2.5;
+_movex -= 0.9;
+}
+
+else {
+  state = 1;
+}
+break;
 
 }
 
-void dis()
-{
-       glutDisplayFunc(display);
+cout << scale << endl;
+glutPostRedisplay();
+glutTimerFunc(20, animation_lava, 0);
 }
+
+void display() {
+
+glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+
+glClear(GL_COLOR_BUFFER_BIT); // Clear the color buffer with current clearing color
+
+//BOX1();
+//BOX2();
+
+//box1();
+glPushMatrix();
+glTranslatef(50, 0, 0);
+lava();
+glFlush(); // Render now
+glPopMatrix();
+
+}
+
+/* Main function: GLUT runs as a console application starting at main() */
 
 int main(int argc, char** argv) {
-   glutInit(&argc, argv);
-   glutInitWindowSize(320, 320);
-   glutInitWindowPosition(50, 50);
-   glutCreateWindow("Translation Animation");
-   glutDisplayFunc(dis);
-   init();
 
-   glutTimerFunc(100, update, 0);
-     glutTimerFunc(100, update1, 0);
-   glutMainLoop();
-   return 0;
+glutInitWindowSize(920, 720); // Set the window's initial width & height
+glutInit(&argc, argv);
+
+glutCreateWindow("Rotating Wheel"); // Create window with the given title
+
+
+glutInitWindowPosition(50, 50); // Position the window's initial top-left corner
+
+glutDisplayFunc(display); // Register callback handler for window re-paint event
+
+//gluOrtho2D(0,+11,0,+10);
+	gluOrtho2D(-140, +140, -80, +80);
+
+//glutTimerFunc(20, box1move, 0);
+//glutTimerFunc(20, box2move, 0);
+glutTimerFunc(20, animation_lava, 0);
+
+
+glutMainLoop(); // Enter the event-processing loop
+
+return 0;
+
 }
-

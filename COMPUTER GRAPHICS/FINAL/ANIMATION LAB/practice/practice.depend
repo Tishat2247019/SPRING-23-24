@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1713786960 source:e:\spring 23-24\computer graphics\final\animation lab\practice\main.cpp
-	<cstdio>
+1714377557 source:e:\spring 23-24\computer graphics\final\animation lab\practice\main.cpp
+	<iostream>
 	<GL/gl.h>
 	<GL/glut.h>
 
