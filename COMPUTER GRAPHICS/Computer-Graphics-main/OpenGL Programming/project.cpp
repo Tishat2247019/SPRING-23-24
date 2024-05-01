@@ -2,10 +2,12 @@
 #include<iostream>
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
 #include <math.h>
+//#include "glutil.h"
 
 using namespace std;
 
 float _movetrain = 0;
+bool _ismovetrain = false;
 
 //ID - 01
 void left_pond() {
@@ -1325,12 +1327,4593 @@ void train03() {
     glPopMatrix();
 }
 
+// ID - 17
+void building_01() {
+
+
+    //FIRST DOWN AREA OF BUILDING 01
+    glBegin(GL_POLYGON);
+    glColor3f(0.44, 0.49, 0.65);
+
+    glVertex2f(6.4, 21.9);
+    glVertex2f(6.4, 29.1);
+    glVertex2f(19, 29.1);
+    glVertex2f(19, 21.9);
+
+
+    glEnd();
+
+    // YELLOW AREA OF DOOR AND WINDOWS
+    glColor3f(1, 0.77, 0.29);
+    glBegin(GL_POLYGON);
+    glVertex2f(13, 29.1);
+
+    glVertex2f(7.2, 29.1);
+    glVertex2f(7.2, 25.2);
+    glVertex2f(10, 25.2);
+    glVertex2f(10, 21.9);
+    glVertex2f(13, 21.9);
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(13, 29.1);
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 25.2);
+    glVertex2f(15.4, 25.2);
+    glVertex2f(15.4, 21.9);
+    glVertex2f(13, 21.9);
+
+
+    glEnd();
+
+    // YELLOW AREA ENDS HERE
+
+
+
+
+    // DOOR OF BUILDING 01 START HERE
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.16, 0.28, 0.35);
+
+    glVertex2f(10.7, 21.9);
+    glVertex2f(10.7, 29.1);
+    glVertex2f(14.7, 29.1);
+    glVertex2f(14.7, 21.9);
+
+
+    glEnd();
+
+    // DOOR OF BUILDING 01 END HERE
+
+    // FIERST WINDOW OF BUIDLING 01 STARTS HERE
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.16, 0.28, 0.35);
+
+    glVertex2f(7.5, 25.5);
+    glVertex2f(7.5, 29.1);
+    glVertex2f(10, 29.1);
+    glVertex2f(10, 25.5);
+
+
+    glEnd();
+
+
+    // SECOND WINDOW OF BUILDING 01 START HERE
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.16, 0.28, 0.35);
+
+    glVertex2f(15.4, 25.5);
+    glVertex2f(17.9, 25.5);
+    glVertex2f(17.9, 29.1);
+    glVertex2f(15.4, 29.1);
+
+
+    glEnd();
+
+    // FIRST UPPER EXTENSION OF BUILDING 01
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.81, 0.82, 0.82);
+
+    glVertex2f(5, 29.1);
+    glVertex2f(5, 29.4);
+    glVertex2f(19, 29.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    //SECOND UPPER EXTENTION OF BUILDING 01
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.44, 0.49, 0.65);
+    glVertex2f(5, 29.4);
+    glVertex2f(5, 30);
+    glVertex2f(19, 30);
+    glVertex2f(19, 29.4);
+
+
+    glEnd();
+
+    //FIRST ROUNDED AREA OF BUIDLING 01 FORM RIGHT
+    //EVERY ROUNDER AREA HAS A X AXIS VALUE OF .8
+    glBegin(GL_POLYGON); // FIRST RED ROUNDD AREA
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+
+    glPushMatrix();
+
+    glTranslatef(-2 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // SECOND RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-4 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // THIRD RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-6 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // FOURTH RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-8 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // FIFTH RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-10 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // SIXTH RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(-12 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // SEVENTH RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-14 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // EIGTH RED ROUNDED AREA
+
+    glColor3f(0.93, 0.31, 0.33);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //WHITE COLOR ROUNDED AREA START HERE
+
+    glPushMatrix();
+
+    glTranslatef(-1 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // SECOND WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-3 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // THIRD WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-5 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // FOURTH WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-7 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // FIFTH WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-9 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // SIXTH WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(-11 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // SEVENTH WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(-13 * .8, 0, 0);
+
+    glBegin(GL_POLYGON); // EIGTH WHITE ROUNDED AREA
+
+    glColor3f(1, 0.98, 0.89);
+
+    glVertex2f(18.2, 29.1);
+    glVertex2f(18.2, 27.4);
+    glVertex2f(18.4, 27);
+    glVertex2f(18.8, 27);
+    glVertex2f(19, 27.4);
+    glVertex2f(19, 29.1);
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+
+
+}
+
+
+
+// ID - 18 
+
+void building_02() {
+
+
+    //UPPER LOWER BODY
+    glColor3f(0.67, 0.67, 0.51);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(13.3, 21.9);
+    glVertex2f(13.3, 58.8);
+    glVertex2f(31.95, 58.8);
+    glVertex2f(31.95, 21.9);
+
+    glEnd();
+
+
+
+    // 2ND UPPER LOWER BODY
+
+    glColor3f(0.44, 0.44, 0.34);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(12.45, 58.8);
+    glVertex2f(12.45, 59.8);
+    glVertex2f(32.8, 59.8);
+    glVertex2f(32.8, 58.8);
+
+    glEnd();
+
+
+    //  3RD UPPER PORTION OF BUILDING 02
+
+    glColor3f(0.67, 0.67, 0.51);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(11, 59.8);
+    glVertex2f(11, 61.5);
+    glVertex2f(33.8, 61.5);
+    glVertex2f(33.8, 59.8);
+
+    glEnd();
+
+    // THIN ARE BEFORE TRIANGLE TYPE AREA OF BUILDING 02
+    glColor3f(0.44, 0.44, 0.34);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(11, 60.7);
+    glVertex2f(11, 61.5);
+    glVertex2f(33.8, 61.5);
+    glVertex2f(33.8, 60.7);
+
+    glEnd();
+
+
+    // TOP MOST TRIANGLE TYPE AREA OF BUILDING 02
+
+
+
+
+    // FIVE SHADES OF TRIANGLE
+
+    // FIRST SHADE
+
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.67, 0.67, 0.51);
+    glVertex2f(11, 61.5);
+    glVertex2f(22.4, 66);
+    glVertex2f(15.4, 61.5);
+
+    glEnd();
+
+    // SECOND SHADE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.73, 0.73, 0.55);
+    glVertex2f(15.4, 61.5);
+    glVertex2f(22.4, 66);
+    glVertex2f(19.3, 61.5);
+
+    glEnd();
+
+
+    // THIRD SHADE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.67, 0.67, 0.51);
+    glVertex2f(19.3, 61.5);
+    glVertex2f(22.4, 66);
+    glVertex2f(23.1, 61.5);
+
+    glEnd();
+
+
+    // FOURTH SHADE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.73, 0.73, 0.55);
+    glVertex2f(23.1, 61.5);
+    glVertex2f(22.4, 66);
+    glVertex2f(28, 61.5);
+
+    glEnd();
+
+
+    // FIVTH SHADE
+    glBegin(GL_POLYGON);
+    glColor3f(0.67, 0.67, 0.51);
+
+    glVertex2f(28, 61.5);
+    glVertex2f(22.4, 66);
+    glVertex2f(33.8, 61.5);
+
+    glEnd();
+
+
+    // WINDOWS OF BUILDING 02
+    // I AM PRINTING THE WINDOWS IN ROW WISE
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //2ND ROW START
+    glPushMatrix();
+
+    glTranslatef(1 * 0, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    ///////
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    // 3rd row start
+
+
+    glPushMatrix();
+
+    glTranslatef(0 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //4TH ROW START
+
+
+    glPushMatrix();
+
+    glTranslatef(0 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(0, -12, 0);
+
+
+    // WINDOWS OF BUILDING 02
+   // I AM PRINTING THE WINDOWS IN ROW WISE
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //2ND ROW START
+    glPushMatrix();
+
+    glTranslatef(1 * 0, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    ///////
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    // 3rd row start
+
+
+    glPushMatrix();
+
+    glTranslatef(0 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //4TH ROW START
+
+
+    glPushMatrix();
+
+    glTranslatef(0 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0, -24, 0);
+
+    // WINDOWS OF BUILDING 02
+   // I AM PRINTING THE WINDOWS IN ROW WISE
+
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //2ND ROW START
+    glPushMatrix();
+
+    glTranslatef(1 * 0, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    ///////
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 1 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    // 3rd row start
+
+
+    glPushMatrix();
+
+    glTranslatef(0 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 2 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    //4TH ROW START
+
+
+    glPushMatrix();
+
+    glTranslatef(0 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(1 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(2 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+
+    glTranslatef(3 * 4, 3 * -3, 0);
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.85, 0.94, 0.96);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glEnd();
+
+
+    glLineWidth(2);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+
+    glVertex2f(15.1, 56);
+    glVertex2f(15.1, 58);
+
+    glVertex2f(15.1, 58);
+    glVertex2f(18.1, 58);
+
+    glVertex2f(18.1, 58);
+    glVertex2f(18.1, 56);
+
+    glVertex2f(18.1, 56);
+    glVertex2f(15.1, 56);
+
+    glEnd();
+
+    // VERTICAL LINE IN THE MIDDLE OF EACH WINDOW
+
+
+    glLineWidth(3.5);
+    glColor3f(0.44, 0.44, 0.34);
+
+    glBegin(GL_LINES);
+    glVertex2f(16.5, 58);
+    glVertex2f(16.5, 56);
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+}
+
+
+// ID - 19
+void building_03() {
+
+
+    // BACK AREA OF BUILDING 03 START HERE
+    glBegin(GL_POLYGON);
+    glColor3f(0.41, 0.7, 0.64);
+
+    glVertex2f(19, 21.9);
+    glVertex2f(19, 35.6);
+    glVertex2f(52.6, 35.6);
+    glVertex2f(52.6, 21.9);
+
+    glEnd();
+
+    // UPPER EXTENSION PORTION OF BACK AREA OF BUILDING 03
+    // START HERE
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.29, 0.54, 0.54);
+
+    glVertex2f(18.3, 35.6);
+    glVertex2f(18.3, 36.7);
+    glVertex2f(53.3, 36.7);
+    glVertex2f(53.3, 35.6);
+
+    glEnd();
+
+
+    // MIDDLE  AREA OF BUIDLING 03 START HERE
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.6, 0.84, 0.78);
+
+    glVertex2f(27.6, 21.9);
+    glVertex2f(27.6, 42.4);
+    glVertex2f(44, 42.4);
+    glVertex2f(44, 22);
+    glEnd();
+
+    // UPPER EXTENSION PORTION OF MIDDLE AREA OF BUILDING 03
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.29, 0.54, 0.54);
+    glVertex2f(26.4, 42.4);
+    glVertex2f(26.4, 43.5);
+    glVertex2f(45, 43.5);
+    glVertex2f(45, 42.4);
+
+    glEnd();
+
+    // BACKGROUND MORE DEEPER COLOR OF MIDDLE MAIN DOOR
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(32.5, 21.9);
+    glVertex2f(32.5, 30.5);
+    glVertex2f(38.5, 30.5);
+    glVertex2f(38.5, 21.9);
+
+    glEnd();
+
+
+    // MIDDLE MAIN DOOR OF BUIDLING 03
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(33, 21.9);
+    glVertex2f(33, 30);
+    glVertex2f(38, 30);
+    glVertex2f(38, 21.9);
+
+    glEnd();
+
+
+    // MIDDLE VETICLE LINE OF THE MIDDLE OF THE MAIN DOOR
+
+
+    glLineWidth(5.5);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(35.5, 30);
+    glVertex2f(35.5, 21.9);
+
+
+    glEnd();
+
+
+    // WINDOWS OF BUILDING 03 START HERE
+
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+
+    // NOW PRINTING ALL THE WINDOWS OF THE LEFT SIDE BUILDING 
+    // OF BUILDING 03
+
+
+
+    glPushMatrix();
+    glTranslatef(0, 1 * -3.1, 0);
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 2 * -3.1, 0);
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0, 3 * -3.1, 0);
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    // Using the windows of the first building of building 03
+    // just translationg the x axis with value 15
+    glPushMatrix();
+    glTranslatef(25, 0, 0);
+
+
+
+    // WINDOWS OF BUILDING 03 START HERE
+
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+
+    // NOW PRINTING ALL THE WINDOWS OF THE LEFT SIDE BUILDING 
+    // OF BUILDING 03
+
+
+
+    glPushMatrix();
+    glTranslatef(0, 1 * -3.1, 0);
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0, 2 * -3.1, 0);
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(0, 3 * -3.1, 0);
+
+    // BACKGROUND MORE DEEPER COLOR OF EACH WINDOW
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(20, 32.3);
+    glVertex2f(20, 34.7);
+    glVertex2f(26.6, 34.7);
+    glVertex2f(26.6, 32.3);
+
+    glEnd();
+
+
+
+
+    // WINDOW MAIN AREA MIDDLE
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+    glVertex2f(20.3, 32.6);
+    glVertex2f(20.3, 34.4);
+    glVertex2f(26.3, 34.4);
+    glVertex2f(26.3, 32.6);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+
+
+
+
+    // WINDOWS OF THE MIDDLE BUILDING START HERE
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    // NOW PRINTING ALL THW WINDOW'S OF THE FIRST ROW
+
+    glPushMatrix();
+    glTranslatef(1 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+
+    glPushMatrix();
+    glTranslatef(2 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(3 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+    //2nd row
+
+
+    glPushMatrix();
+    glTranslatef(0, -3.7, 0);
+
+
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    // NOW PRINTING ALL THW WINDOW'S OF THE FIRST ROW
+
+    glPushMatrix();
+    glTranslatef(1 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+
+    glPushMatrix();
+    glTranslatef(2 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(3 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+    glPopMatrix();
+
+
+    // 3rd row.. just translating the first row by 3 y axis value
+
+    glPushMatrix();
+    glTranslatef(0, 2 * -3.7, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    // NOW PRINTING ALL THW WINDOW'S OF THE FIRST ROW
+
+    glPushMatrix();
+    glTranslatef(1 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+
+    glPushMatrix();
+    glTranslatef(2 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(3 * 4, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.35, 0.6, 0.58);
+
+    glVertex2f(29, 38.5);
+    glVertex2f(29, 41.5);
+    glVertex2f(31.5, 41.5);
+    glVertex2f(31.5, 38.5);
+
+    glEnd();
+
+
+
+    // MIDDLE OF EACH WINDOW    
+    glBegin(GL_POLYGON);
+
+    glColor3f(0.87, 0.94, 0.88);
+
+    glVertex2f(29.3, 38.8);
+    glVertex2f(29.3, 41.2);
+    glVertex2f(31.2, 41.2);
+    glVertex2f(31.2, 38.8);
+
+    glEnd();
+
+    // HORIZONTAL LINE IN THE MIDDE OF EACH WINDOW
+
+    glLineWidth(4);
+    glBegin(GL_LINES);
+
+    glColor3f(0.35, 0.6, 0.58);
+    glVertex2f(29.3, 40);
+    glVertex2f(31.2, 40);
+
+
+    glEnd();
+
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+}
+
+
+// ID - 20
+void building_04() {
+
+    // LOWER PORTION OF BUILDING 04 START HERE
+
+    glColor3f(0.62, 0.71, 0.76);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(35, 21.9);
+    glVertex2f(35, 61);
+    glVertex2f(50.9, 61);
+    glVertex2f(50.9, 21.9);
+
+    glEnd();
+
+
+    // UPPER MORE DEEP COLOR PORTION OF BUILDING 04
+
+    glColor3f(0.51, 0.58, 0.62);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(34.2, 61);
+    glVertex2f(34.2, 61.8);
+    glVertex2f(51.6, 61.8);
+    glVertex2f(51.6, 61);
+
+    glEnd();
+
+    // 2ND UPPER PORTION FROM BELOW OF BUILDING 04
+    glColor3f(0.62, 0.71, 0.76);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 61.8);
+    glVertex2f(36.5, 65.4);
+    glVertex2f(49.3, 65.4);
+    glVertex2f(49.3, 61.8);
+
+    glEnd();
+
+    // 2ND UPPER MORE DEEP COLOR PORTION OF BUILDING 04
+
+    glColor3f(0.51, 0.58, 0.62);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(35.8, 65.4);
+    glVertex2f(35.8, 66);
+    glVertex2f(50, 66);
+    glVertex2f(50, 65.4);
+
+    glEnd();
+
+
+    // 3RD UPPER PORTION FROM BELOW OF BUILDING 04
+    glColor3f(0.62, 0.71, 0.76);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(39.8, 66);
+    glVertex2f(39.8, 69.4);
+    glVertex2f(46, 69.4);
+    glVertex2f(46, 66);
+
+    glEnd();
+
+
+    // 3RD UPPER MORE DEEP COLOR PORTION OF BUILDING 04
+
+    glColor3f(0.51, 0.58, 0.62);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(39, 69.4);
+    glVertex2f(39, 70);
+    glVertex2f(46.8, 70);
+    glVertex2f(46.8, 69.4);
+
+    glEnd();
+
+
+    // 4TH UPPER PORTION FROM BELOW OF BUILDING 04
+    glColor3f(0.62, 0.71, 0.76);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.6, 70);
+    glVertex2f(40.6, 71);
+    glVertex2f(45.2, 71);
+    glVertex2f(45.2, 70);
+
+    glEnd();
+
+
+    // UPPER MORE DEEP VERTICLE ANTENA LIKE PORTION OF BUILDING 04
+
+    glColor3f(0.51, 0.58, 0.62);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(42.6, 71);
+    glVertex2f(42.6, 75);
+    glVertex2f(43.2, 77);
+    glVertex2f(43.2, 71);
+
+    glEnd();
+
+    //FIVE VERTICALE LINE OF 3RD UPPER PORTION
+
+    glColor3f(0.51, 0.58, 0.62);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.2, 66.4);
+    glVertex2f(40.2, 69);
+    glVertex2f(40.8, 69);
+    glVertex2f(40.8, 66.4);
+
+    glEnd();
+
+    // NOW PRINTING ALL THE VERTICLE AREA'S, JUST TRANSLATING
+    glPushMatrix();
+    glTranslatef(1 * 0.95, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.2, 66.4);
+    glVertex2f(40.2, 69);
+    glVertex2f(40.8, 69);
+    glVertex2f(40.8, 66.4);
+
+    glEnd();
+
+
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(2 * 0.95, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.2, 66.4);
+    glVertex2f(40.2, 69);
+    glVertex2f(40.8, 69);
+    glVertex2f(40.8, 66.4);
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 0.95, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.2, 66.4);
+    glVertex2f(40.2, 69);
+    glVertex2f(40.8, 69);
+    glVertex2f(40.8, 66.4);
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(4 * 0.95, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.2, 66.4);
+    glVertex2f(40.2, 69);
+    glVertex2f(40.8, 69);
+    glVertex2f(40.8, 66.4);
+
+    glEnd();
+
+
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(5 * 0.95, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(40.2, 66.4);
+    glVertex2f(40.2, 69);
+    glVertex2f(40.8, 69);
+    glVertex2f(40.8, 66.4);
+
+    glEnd();
+
+
+    glPopMatrix();
+
+
+    //VERTICAL AREARS IN THE 2ND UPPER PORTOIN
+
+
+    glColor3f(0.79, 0.87, 0.9);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(37.5, 61.8);
+    glVertex2f(37.5, 65);
+    glVertex2f(38.8, 65);
+    glVertex2f(38.8, 61.8);
+
+    glEnd();
+
+    // Now printing all the vertical areas with the first code
+    // just translating
+
+    glPushMatrix();
+    glTranslatef(1 * 1.90, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(37.5, 61.8);
+    glVertex2f(37.5, 65);
+    glVertex2f(38.8, 65);
+    glVertex2f(38.8, 61.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
+    glPushMatrix();
+    glTranslatef(2 * 1.90, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(37.5, 61.8);
+    glVertex2f(37.5, 65);
+    glVertex2f(38.8, 65);
+    glVertex2f(38.8, 61.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 1.90, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(37.5, 61.8);
+    glVertex2f(37.5, 65);
+    glVertex2f(38.8, 65);
+    glVertex2f(38.8, 61.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(4 * 1.90, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(37.5, 61.8);
+    glVertex2f(37.5, 65);
+    glVertex2f(38.8, 65);
+    glVertex2f(38.8, 61.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(5 * 1.90, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(37.5, 61.8);
+    glVertex2f(37.5, 65);
+    glVertex2f(38.8, 65);
+    glVertex2f(38.8, 61.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    //  WINDOWS OF THE FIRST LOWER PORTION START HERE
+
+
+    glColor3f(0.79, 0.87, 0.9);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    //2ND ROW  USING THE CODES OF THE FIRST ROW
+    // JUST TRANSLATING IN Y AXIS
+
+    glPushMatrix();
+
+    glTranslatef(0, 1 * -3.5, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+
+    //3RD ROW USING THE CODE OF THE FIRST ROW
+    // JUST TRANSLATING THE CODES IN Y AXIS
+
+
+    glPushMatrix();
+
+    glTranslatef(0, 2 * -3.5, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+    //RTH ROW, SAME USING THE CODSES OF THE FIRST ROW
+    //JUST TRANSLATING IN Y AXIS
+
+
+    glPushMatrix();
+
+    glTranslatef(0, 3 * -3.5, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+    //5TH ROW SAME USING THE CODES OF THE FIRST ROW
+    //JUST TRANSLATING IN Y AXIS
+
+    glPushMatrix();
+
+    glTranslatef(0, 4 * -3.5, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+
+    //6TH ROW
+    glPushMatrix();
+
+    glTranslatef(0, 5 * -3.5, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+    //7TH ROW
+
+
+    glPushMatrix();
+
+    glTranslatef(0, 6 * -3.5, 0);
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+
+    //NOW PRINTING ALL THE WINDOWS BY USING TRANSLATEF FUNCTION
+
+    glPushMatrix();
+    glTranslatef(1 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(2 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(3 * 3.5, 0, 0);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(36.5, 57.5);
+    glVertex2f(36.5, 60);
+    glVertex2f(39, 60);
+    glVertex2f(39, 57.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
 bool state = true;
 float _move = 0;
 
 void bird01() {
     glPushMatrix();
-    glTranslatef(40, 0, 0);
+    glTranslatef(40, 0, 0);//translated 40 value in x axis , so that is appear from the outside screen of the right 
+    // side with fly aniomation
     glTranslatef(_move, 0, 0);
     //glScalef(2, 2, 1);
     glColor3f(0, 0, 0);
@@ -1470,9 +6053,152 @@ glEnd();*/
 
 }
 
+
 void bird02() {
     glPushMatrix();
-    glTranslatef(40, 0, 0);
+    glTranslatef(45, -5, 0);
+    glTranslatef(_move, 0, 0);
+    //glScalef(2, 2, 1);
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(97.08, 70.6);
+    glVertex2f(96.88, 70.75);
+    glVertex2f(96.4, 70.8);
+    glVertex2f(96.2, 70.2);
+    glVertex2f(95.6, 69.4);
+    glVertex2f(96.4, 70);
+    glVertex2f(97.25, 69.85);
+
+
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glVertex2f(99, 70.5);
+    glVertex2f(98.22, 70.74);
+    glVertex2f(97.08, 70.6);
+    glVertex2f(97.25, 69.85);
+    glVertex2f(97.75, 69.5);
+    glVertex2f(98.45, 69.6);
+
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(100.84, 70.26);
+    glVertex2f(100.6, 70.4);
+    glVertex2f(99.643, 70.4080);
+    glVertex2f(99, 70.5);
+    glVertex2f(98.22, 70.74);
+    glVertex2f(98.45, 69.6);
+    glVertex2f(99.2708976830173, 69.7946980991128);
+    glVertex2f(100.12, 70.1);
+
+
+    glEnd();
+
+
+
+    //wing 1
+    if (state) {
+        /*glColor3f(1, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.4, 71.5);
+        glVertex2f(98, 72.8);
+        glVertex2f(97.6, 71.4);
+        glVertex2f(97.6, 70.2);
+        glVertex2f(98.4, 70.4);
+        glVertex2f(98.4, 71.5);
+
+        glEnd();*/
+
+
+        glColor3f(0, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.8, 71.8);
+        glVertex2f(98.38, 72.9);
+        glVertex2f(97.4, 71.2);
+        glVertex2f(97.35, 70.25);
+        glVertex2f(98.85, 70.35);
+
+
+        glEnd();
+    }
+
+    // wing 2
+    if (!state) {
+        /*
+glColor3f(1, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.3, 69.9);
+        glVertex2f(100.2, 69.6);
+        glVertex2f(98.3, 70.6);
+        glVertex2f(97.5, 70.4);
+        glVertex2f(98.3, 69.9);
+
+
+        glEnd();*/
+
+
+        glColor3f(0, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98, 69.4);
+        glVertex2f(100, 68.5);
+        glVertex2f(98.6, 70.55);
+        glVertex2f(97.4, 70.2);
+
+
+
+        glEnd();
+
+        // 3
+        /*
+        glBegin(GL_POLYGON);
+        glVertex2f(98.85, 70.45);
+        glVertex2f(99.65, 71.4);
+        glVertex2f(97.4, 70.55);
+        glVertex2f(98, 70.15);
+
+        glEnd();
+        */
+
+
+
+    }
+
+    //left leg
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(98.62, 69.34);
+    glVertex2f(98.9, 69.25);
+    glVertex2f(98.68, 69.38);
+    glVertex2f(98.653547, 69.64827);
+    glVertex2f(98.45, 69.6);
+    glVertex2f(98.59, 69.49);
+
+
+    glEnd();
+
+    //leg2
+    glBegin(GL_POLYGON);
+    glVertex2f(98.72, 69.44);
+    glVertex2f(98.95, 69.35);
+    glVertex2f(98.75, 69.5);
+    glVertex2f(98.7270945266668, 69.6650693284027);
+    glVertex2f(98.653547, 69.64827);
+
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+}
+
+void bird03() {
+    glPushMatrix();
+    glTranslatef(50, 0, 0);
     glTranslatef(_move, 0, 0);
     //glScalef(2, 2, 1);
     glColor3f(0, 0, 0);
@@ -1608,6 +6334,294 @@ glEnd();*/
     glEnd();
 
     glPopMatrix();
+
+
+}
+
+void bird04() {
+    glPushMatrix();
+    glTranslatef(55, -5, 0);
+    glTranslatef(_move, 0, 0);
+    //glScalef(2, 2, 1);
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(97.08, 70.6);
+    glVertex2f(96.88, 70.75);
+    glVertex2f(96.4, 70.8);
+    glVertex2f(96.2, 70.2);
+    glVertex2f(95.6, 69.4);
+    glVertex2f(96.4, 70);
+    glVertex2f(97.25, 69.85);
+
+
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glVertex2f(99, 70.5);
+    glVertex2f(98.22, 70.74);
+    glVertex2f(97.08, 70.6);
+    glVertex2f(97.25, 69.85);
+    glVertex2f(97.75, 69.5);
+    glVertex2f(98.45, 69.6);
+
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(100.84, 70.26);
+    glVertex2f(100.6, 70.4);
+    glVertex2f(99.643, 70.4080);
+    glVertex2f(99, 70.5);
+    glVertex2f(98.22, 70.74);
+    glVertex2f(98.45, 69.6);
+    glVertex2f(99.2708976830173, 69.7946980991128);
+    glVertex2f(100.12, 70.1);
+
+
+    glEnd();
+
+
+
+    //wing 1
+    if (state) {
+        /*glColor3f(1, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.4, 71.5);
+        glVertex2f(98, 72.8);
+        glVertex2f(97.6, 71.4);
+        glVertex2f(97.6, 70.2);
+        glVertex2f(98.4, 70.4);
+        glVertex2f(98.4, 71.5);
+
+        glEnd();*/
+
+
+        glColor3f(0, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.8, 71.8);
+        glVertex2f(98.38, 72.9);
+        glVertex2f(97.4, 71.2);
+        glVertex2f(97.35, 70.25);
+        glVertex2f(98.85, 70.35);
+
+
+        glEnd();
+    }
+
+    // wing 2
+    if (!state) {
+        /*
+glColor3f(1, 0, 0);
+glBegin(GL_POLYGON);
+glVertex2f(98.3, 69.9);
+glVertex2f(100.2, 69.6);
+glVertex2f(98.3, 70.6);
+glVertex2f(97.5, 70.4);
+glVertex2f(98.3, 69.9);
+
+
+glEnd();*/
+
+
+        glColor3f(0, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98, 69.4);
+        glVertex2f(100, 68.5);
+        glVertex2f(98.6, 70.55);
+        glVertex2f(97.4, 70.2);
+
+
+
+        glEnd();
+
+        // 3
+        /*
+        glBegin(GL_POLYGON);
+        glVertex2f(98.85, 70.45);
+        glVertex2f(99.65, 71.4);
+        glVertex2f(97.4, 70.55);
+        glVertex2f(98, 70.15);
+
+        glEnd();
+        */
+
+
+
+    }
+
+    //left leg
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(98.62, 69.34);
+    glVertex2f(98.9, 69.25);
+    glVertex2f(98.68, 69.38);
+    glVertex2f(98.653547, 69.64827);
+    glVertex2f(98.45, 69.6);
+    glVertex2f(98.59, 69.49);
+
+
+    glEnd();
+
+    //leg2
+    glBegin(GL_POLYGON);
+    glVertex2f(98.72, 69.44);
+    glVertex2f(98.95, 69.35);
+    glVertex2f(98.75, 69.5);
+    glVertex2f(98.7270945266668, 69.6650693284027);
+    glVertex2f(98.653547, 69.64827);
+
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+}
+
+void bird05() {
+    glPushMatrix();
+    glTranslatef(52.5, -10, 0);//translated 40 value in x axis , so that is appear from the outside screen of the right 
+    // side with fly aniomation
+    glTranslatef(_move, 0, 0);
+    //glScalef(2, 2, 1);
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(97.08, 70.6);
+    glVertex2f(96.88, 70.75);
+    glVertex2f(96.4, 70.8);
+    glVertex2f(96.2, 70.2);
+    glVertex2f(95.6, 69.4);
+    glVertex2f(96.4, 70);
+    glVertex2f(97.25, 69.85);
+
+
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glVertex2f(99, 70.5);
+    glVertex2f(98.22, 70.74);
+    glVertex2f(97.08, 70.6);
+    glVertex2f(97.25, 69.85);
+    glVertex2f(97.75, 69.5);
+    glVertex2f(98.45, 69.6);
+
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(100.84, 70.26);
+    glVertex2f(100.6, 70.4);
+    glVertex2f(99.643, 70.4080);
+    glVertex2f(99, 70.5);
+    glVertex2f(98.22, 70.74);
+    glVertex2f(98.45, 69.6);
+    glVertex2f(99.2708976830173, 69.7946980991128);
+    glVertex2f(100.12, 70.1);
+
+
+    glEnd();
+
+
+
+    //wing 1
+    if (state) {
+        /*glColor3f(1, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.4, 71.5);
+        glVertex2f(98, 72.8);
+        glVertex2f(97.6, 71.4);
+        glVertex2f(97.6, 70.2);
+        glVertex2f(98.4, 70.4);
+        glVertex2f(98.4, 71.5);
+
+        glEnd();*/
+
+
+        glColor3f(0, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98.8, 71.8);
+        glVertex2f(98.38, 72.9);
+        glVertex2f(97.4, 71.2);
+        glVertex2f(97.35, 70.25);
+        glVertex2f(98.85, 70.35);
+
+
+        glEnd();
+    }
+
+    // wing 2
+    if (!state) {
+        /*
+glColor3f(1, 0, 0);
+glBegin(GL_POLYGON);
+glVertex2f(98.3, 69.9);
+glVertex2f(100.2, 69.6);
+glVertex2f(98.3, 70.6);
+glVertex2f(97.5, 70.4);
+glVertex2f(98.3, 69.9);
+
+
+        glEnd();*/
+
+
+        glColor3f(0, 0, 0);
+        glBegin(GL_POLYGON);
+        glVertex2f(98, 69.4);
+        glVertex2f(100, 68.5);
+        glVertex2f(98.6, 70.55);
+        glVertex2f(97.4, 70.2);
+
+
+
+        glEnd();
+
+        // 3
+        /*
+        glBegin(GL_POLYGON);
+        glVertex2f(98.85, 70.45);
+        glVertex2f(99.65, 71.4);
+        glVertex2f(97.4, 70.55);
+        glVertex2f(98, 70.15);
+
+        glEnd();
+        */
+
+
+
+    }
+
+    //left leg
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(98.62, 69.34);
+    glVertex2f(98.9, 69.25);
+    glVertex2f(98.68, 69.38);
+    glVertex2f(98.653547, 69.64827);
+    glVertex2f(98.45, 69.6);
+    glVertex2f(98.59, 69.49);
+
+
+    glEnd();
+
+    //leg2
+    glBegin(GL_POLYGON);
+    glVertex2f(98.72, 69.44);
+    glVertex2f(98.95, 69.35);
+    glVertex2f(98.75, 69.5);
+    glVertex2f(98.7270945266668, 69.6650693284027);
+    glVertex2f(98.653547, 69.64827);
+
+
+
+    glEnd();
+
+    glPopMatrix();
+
+
+
 
 
 }
@@ -1627,7 +6641,7 @@ void change_wing(int value) {
 // This function is for the movement of the birds.. The flying animation...
 void fly(int value) {
     _move -= 0.5;
-    cout << _move << endl;
+    //cout << _move << endl;
 
     if (_move < -150) {
         _move = 0;
@@ -1638,17 +6652,75 @@ void fly(int value) {
 
 }
 
+void PlayMusic(const string& path) {
+    // if (_ismovetrain)
+    PlaySound(path.c_str(), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+    glutPostRedisplay();
+}
+
 //This function is for the movement of the train..
 void _move_train(int value) {
 
-    _movetrain -= 0.5;
 
-    if (_movetrain < -230) {
-        _movetrain = 0;
+    if (_ismovetrain) {
+        _movetrain -= 0.5;
+        // PlayMusic("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/trainsound.wav");
+
+       // cout << _movetrain << endl;
+
+        if (_movetrain == -0.5) {
+
+            PlayMusic("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/trainsound.wav");
+        }
+
+        if (_movetrain < -230) {
+            _movetrain = 0;
+
+        }
+
+        // train_music("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/trainsound.wav");
+        glutPostRedisplay();
     }
-    glutPostRedisplay();
     glutTimerFunc(20, _move_train, 0);
 }
+
+
+
+
+
+//This function is used for the keypress functionality to the toggle the movement of the train;
+void _move_train_keypress(unsigned char key, int x, int y) {
+    switch (key) {
+    case 'a':
+        _ismovetrain = true;;
+        break;
+    case 'w':
+        _ismovetrain = false;
+        // PlayMusic(NULL);
+        break;
+    }
+    glutPostRedisplay();
+    // cout << _ismovetrain << endl;
+}
+
+
+
+
+void play_trainmusic(int value) {
+    static bool soundPlaying = false;
+    if (_ismovetrain && !soundPlaying) {
+        cout << "play_trainmusic function called" << endl; // Debug output
+        PlayMusic("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/trainsound.wav");
+        soundPlaying = true;
+    }
+    else if (!_ismovetrain && soundPlaying) {
+        // Stop the sound
+        soundPlaying = false;
+        //PlayMusic(NULL); // Stop the currently playing sound
+    }
+    glutTimerFunc(2000, play_trainmusic, 0);
+}
+
 
 
 void display() {
@@ -1661,6 +6733,17 @@ void display() {
     front_road(); // ID - 02
     side_green_area(); // ID - 03
     road(); // ID - 06
+
+    //glPushMatrix();
+    //glTranslatef(0, 3, 0);
+    building_02(); // ID - 18
+    building_01(); // ID - 17
+    building_04(); // ID - 20
+    building_03(); // ID - 19
+    //glPopMatrix();
+
+
+    /*
     train_platform();; // ID - 09
     train_piller01(); // ID - 10
     train_piller02(); // ID - 11
@@ -1668,8 +6751,12 @@ void display() {
     train_piller04(); // ID - 13
 
 
+
+
+
     //This push_pop matrix is for the train movement animation
     glPushMatrix();
+
     glTranslatef(80, 0, 0);
     glTranslatef(_movetrain, 0, 0);
     train01(); // ID - 14
@@ -1680,29 +6767,19 @@ void display() {
 
     poll_first(); // ID - 04
     poll_second(); // ID - 05
+
+*/
+
     ciecle();// ID - 08
+
+
+    //Five birds flying 
     bird01();
-
-
-    glPushMatrix();
-    glTranslatef(5, -5, 0);
     bird02();
-    glPopMatrix();
+    bird03();
+    bird04();
+    bird05();
 
-    glPushMatrix();
-    glTranslatef(10, 0, 0);
-    bird01();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(15, -5, 0);
-    bird01();
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(12.5, -10, 0);
-    bird01();
-    glPopMatrix();
 
 
     glFlush(); // Render now
@@ -1719,14 +6796,17 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv); // Initialize GLUT
     glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH) - 1420) / 2,
         (glutGet(GLUT_SCREEN_HEIGHT) - 950) / 2);
+
     glutCreateWindow("Futureistic city"); // Create a window with the given title
 
-
     glutDisplayFunc(display); // Register display callback handler for window re-paint
+
+
     glutTimerFunc(20, change_wing, 0);
     glutTimerFunc(80, fly, 0);
     glutTimerFunc(20, _move_train, 0);
 
+    glutKeyboardUpFunc(_move_train_keypress);
     gluOrtho2D(0, +130, 0, 80);
     glutMainLoop(); // Enter the event-processing loop
 
