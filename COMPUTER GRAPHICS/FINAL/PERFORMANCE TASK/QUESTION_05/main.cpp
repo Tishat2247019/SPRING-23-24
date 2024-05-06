@@ -73,6 +73,7 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(1000, 600);   // Set the window's initial width & height
 	glutCreateWindow("OpenGL Setup Test"); // Create a window with the given title
 	loadImageAndStore("E:/SPRING 23-24/COMPUTER GRAPHICS/FINAL/PERFORMANCE TASK/QUESTION_05/sample.bmp");
+
 	glutDisplayFunc(display); // Register display callback handler for window re-paint
 	gluOrtho2D(-2, 28, -8, 12);
 	//gluOrtho2D(0, 50, 0, 50);

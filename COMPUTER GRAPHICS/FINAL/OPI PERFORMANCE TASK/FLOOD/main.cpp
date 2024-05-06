@@ -93,7 +93,7 @@ glPopMatrix();
 void change(int value){
 _movey += 0.005;
 
-cout << _movey << endl;
+
 glutPostRedisplay();
 glutTimerFunc(20, change, 0);
 

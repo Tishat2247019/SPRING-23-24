@@ -2,7 +2,7 @@
 #include <cmath>
 #include <ctime>
 
-#define WIDTH 250
+#define WIDTH 350
 #define HEIGHT 400
 
 float fire[WIDTH][HEIGHT];
@@ -11,10 +11,11 @@ float fire[WIDTH][HEIGHT];
 
 void drawFire() {
     for(int y = HEIGHT/2 + 1; y < HEIGHT; ++y) {
-        for(int x = 0; x < WIDTH-150; ++x) { // Start from x1 and end before WIDTH - x2
+        for(int x = 0; x < WIDTH-190; ++x) { // Start from x1 and end before WIDTH - x2
             float avg = (fire[x][y-1] + fire[(x-1+WIDTH)%WIDTH][y-1] + fire[(x+1)%WIDTH][y-1]) / 3.0;
             fire[x][y] = (avg + rand() % 20 - 10);
             glColor3f(fire[x][y] / 1.0, 0.0, 0.0);
+            glPointSize(3);
             glBegin(GL_POINTS);
             glVertex2i(x, y);
             glEnd();
@@ -286,8 +287,10 @@ glEnd();
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
-    drawFire();
+    glClearColor(0.0, 0.0, 0.0, 1.0);
     building();
+    drawFire();
+
     glutSwapBuffers();
 }
 
@@ -304,7 +307,6 @@ int main(int argc, char** argv) {
     glutInitWindowSize(700, 600);
     glutCreateWindow("Fire Effect");
 
-    glClearColor(0.0, 0.0, 0.0, 1.0);
     gluOrtho2D(-70, 180, -100, 300);
     srand(time(NULL));
     for(int i = 0; i < WIDTH-150 ; ++i)

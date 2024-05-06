@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1713117601 source:e:\spring 23-24\computer graphics\final\project practice\building fire effect practice\fire_efect_practice\main.cpp
+1714826323 source:e:\spring 23-24\computer graphics\final\project practice\building fire effect practice\fire_efect_practice\main.cpp
 	<GL/glut.h>
 	<cmath>
 	<ctime>
