@@ -3,8 +3,10 @@
 #include <GL/glut.h> // GLUT, include glu.h and gl.h
 #include <math.h>
 #include "glutil.h"
+#include "rain.h"
 #include <cmath>
 #include <ctime>
+#include<mmsystem.h>
 
 using namespace std;
 
@@ -29,6 +31,14 @@ float fireupmove = 0;
 bool showfire = false;
 int countfire = 1;
 
+int vanishfire = 20;
+
+
+float _angle1 = 0;
+float _angle2 = 0;
+
+
+float _movehelicopter = 0;
 
 
 //ID - 01
@@ -182,7 +192,9 @@ void poll_first() {
 
 
     // first poll upper lower portion  devided in 3 parts
-    glColor3f(0.87, 0.4, 0.29);
+    // glColor3f(0.67, 0.21, 0.11);
+    glColor3f(0.91, 0.92, 0.9);
+
 
 
     glBegin(GL_POLYGON);
@@ -211,7 +223,7 @@ void poll_first() {
     glEnd();
 
     //  square type white object in first poll
-    glColor3f(1, 0, 0);
+    glColor3f(0.94, 0.85, 0.76);
     glBegin(GL_POLYGON);
     glVertex2f(36.5, 21);
     glVertex2f(36.5, 23.5);
@@ -220,12 +232,24 @@ void poll_first() {
     glEnd();
 
     // cylinder in the first poll
-    glColor3f(1, 0, 0);
+
+    //BACKGROUND MORE LIGHTER ARE
+    glColor3f(0.93, 0.85, 0.73);
     glBegin(GL_POLYGON);
     glVertex2f(39.2, 24.5);
     glVertex2f(39.2, 33.6);
     glVertex2f(42, 33.6);
     glVertex2f(42, 24.5);
+
+    glEnd();
+
+    //MAIN MORE DEEPER AREA
+    glColor3f(0.99, 0.72, 0.4);
+    glBegin(GL_POLYGON);
+    glVertex2f(39.2, 26);
+    glVertex2f(39.2, 31.8);
+    glVertex2f(42, 31.8);
+    glVertex2f(42, 26);
 
     glEnd();
 
@@ -275,7 +299,9 @@ void poll_second() {
 
 
     // second poll upper lower portion  devided in 3 parts
-    glColor3f(0.87, 0.4, 0.29);
+    //glColor3f(0.67, 0.21, 0.11);
+    glColor3f(0.91, 0.92, 0.9);
+
 
 
     glBegin(GL_POLYGON);
@@ -306,7 +332,7 @@ void poll_second() {
     glEnd();
 
     //  square type white object in second poll
-    glColor3f(1, 0, 0);
+    glColor3f(0.94, 0.85, 0.76);
     glBegin(GL_POLYGON);
     glVertex2f(44, 26);
     glVertex2f(44, 27.8);
@@ -315,15 +341,27 @@ void poll_second() {
     glEnd();
 
     // cylinder in the first poll
-    glColor3f(1, 0, 0);
+
+    //MAIN MORE LIGHTER AREA
+    glColor3f(0.93, 0.85, 0.73);
     glBegin(GL_POLYGON);
     glVertex2f(46, 28.8);
     glVertex2f(46, 36);
     glVertex2f(47.8, 36);
     glVertex2f(47.8, 28.8);
+    glEnd();
 
+
+    //MAIN MORE DEEPER AREA
+    glColor3f(0.99, 0.72, 0.4);
+    glBegin(GL_POLYGON);
+    glVertex2f(46, 29.5);
+    glVertex2f(46, 34.5);
+    glVertex2f(47.8, 34.5);
+    glVertex2f(47.8, 29.5);
 
     glEnd();
+
 
     // two black vertical lines in the first poll cylinder
     glLineWidth(4.5);
@@ -872,6 +910,11 @@ void train_piller04() {
 // ID - 14
 void train01() {
 
+
+    glPushMatrix();
+    glTranslatef(80, 0, 0);
+    glTranslatef(_movetrain, 0, 0);
+
     glPushMatrix();
     glTranslatef(0, 1.5, 0);
 
@@ -1000,7 +1043,7 @@ void train01() {
 
     //silver color first
 
-    glColor3f(0.84, 0.89, 0.92);
+    glColor3f(0.85, 0.9, 0.91);
     glBegin(GL_POLYGON);
 
     glVertex2f(63.6, 36.7);
@@ -1013,7 +1056,7 @@ void train01() {
 
     //silver color second
 
-    glColor3f(0.84, 0.89, 0.92);
+    glColor3f(0.85, 0.9, 0.91);
     glBegin(GL_POLYGON);
 
     glVertex2f(69.7, 35.8);
@@ -1025,7 +1068,7 @@ void train01() {
 
     //silver color third
 
-    glColor3f(0.84, 0.89, 0.92);
+    glColor3f(0.85, 0.9, 0.91);
     glBegin(GL_POLYGON);
 
     glVertex2f(78, 35.8);
@@ -1036,6 +1079,45 @@ void train01() {
     glEnd();
 
 
+    //NOW CODING THE CONNECTOR BETWEEN THE TRAINS
+    //FIRST CONNECTOR
+    glColor3f(0.27, 0.29, 0.33);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(84.5, 41);
+    glVertex2f(84, 40);
+    glVertex2f(84, 36);
+    glVertex2f(84.5, 35.5);
+    glVertex2f(85, 36.5);
+    glVertex2f(85, 40);
+    glVertex2f(84.5, 41);
+
+    glEnd();
+
+    //SECOND CONNECTOR
+    //USING THE CODE OF THE FIRST CONNECTOR
+    //JUST TRANSLATING IN X AXIS
+    glPushMatrix();
+    glColor3f(0.27, 0.29, 0.33);
+    glTranslatef(1, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(84.5, 41);
+    glVertex2f(84, 40);
+    glVertex2f(84, 36);
+    glVertex2f(84.5, 35.5);
+    glVertex2f(85, 36.5);
+    glVertex2f(85, 40);
+    glVertex2f(84.5, 41);
+
+    glEnd();
+    glPopMatrix();
+
+
+    glPopMatrix();
+
+
+
     glPopMatrix();
 
 }
@@ -1044,6 +1126,9 @@ void train01() {
 // ID - 15
 void train02() {
 
+    glPushMatrix();
+    glTranslatef(80, 0, 0);
+    glTranslatef(_movetrain, 0, 0);
 
     glPushMatrix();
     glTranslatef(0, 1.5, 0);
@@ -1126,6 +1211,8 @@ void train02() {
     glPopMatrix();
 
 
+
+
     glPopMatrix();
 
 
@@ -1198,6 +1285,109 @@ void train02() {
     glVertex2f(83.3, 37);
 
     glEnd();
+
+
+
+    glPopMatrix();
+
+
+    //TRANSLATING THE CONNECTORS IN X AXIS BY 28 VALUE
+
+    glPushMatrix();
+    glTranslatef(28, 1.5, 0);
+
+    //NOW CODING THE CONNECTOR BETWEEN THE TRAINS
+        //FIRST CONNECTOR
+    glColor3f(0.27, 0.29, 0.33);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(84.5, 41);
+    glVertex2f(84, 40);
+    glVertex2f(84, 36);
+    glVertex2f(84.5, 35.5);
+    glVertex2f(85, 36.5);
+    glVertex2f(85, 40);
+    glVertex2f(84.5, 41);
+
+    glEnd();
+
+    //SECOND CONNECTOR
+    //USING THE CODE OF THE FIRST CONNECTOR
+    //JUST TRANSLATING IN X AXIS
+    glPushMatrix();
+    glColor3f(0.27, 0.29, 0.33);
+    glTranslatef(1, 0, 0);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(84.5, 41);
+    glVertex2f(84, 40);
+    glVertex2f(84, 36);
+    glVertex2f(84.5, 35.5);
+    glVertex2f(85, 36.5);
+    glVertex2f(85, 40);
+    glVertex2f(84.5, 41);
+
+    glEnd();
+    glPopMatrix();
+
+
+    glPopMatrix();
+
+
+
+    //TRANSLATING THE FIRST AND SECOND SILVER COLOR SHADE OF TRAIN 01 TO TRAIN 02
+    //y axis value 1.5 as the rest of the code as done
+
+    //silver color second 
+
+    glPushMatrix();
+
+    glTranslatef(1 * 26, 1.5, 0);
+
+    glColor3f(0.85, 0.9, 0.91);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(69.7, 35.8);
+    glVertex2f(69.7, 36.7);
+    glVertex2f(76.8, 36.7);
+    glVertex2f(76.8, 35.8);
+
+    glEnd();
+
+    //silver color third
+
+    glColor3f(0.85, 0.9, 0.91);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(78, 35.8);
+    glVertex2f(78, 36.7);
+    glVertex2f(83.3, 36.7);
+    glVertex2f(83.3, 35.8);
+
+    glEnd();
+
+    //USING THE CODE OF SILVE COLOR THIRD TO DRAW THE FIRST SILVER COLOR OF TRAIN 02
+    // JUST TRANSLATIN IN X AXIS BY NEGATIVE VALUE
+
+    glPushMatrix();
+    glTranslatef(-15, 0, 0);
+
+    glColor3f(0.85, 0.9, 0.91);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(78, 35.8);
+    glVertex2f(78, 36.7);
+    glVertex2f(83.3, 36.7);
+    glVertex2f(83.3, 35.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+    ////
+
+
     glPopMatrix();
 }
 
@@ -1205,6 +1395,10 @@ void train02() {
 void train03() {
 
     glPushMatrix();
+    glTranslatef(80, 0, 0);
+    glTranslatef(_movetrain, 0, 0);
+
+    glPushMatrix();
 
     glTranslatef(28, 0, 0);
 
@@ -1362,6 +1556,63 @@ void train03() {
 
     glEnd();
     glPopMatrix();
+
+
+    glPopMatrix();
+
+
+    //TRANSLATING THE FIRST AND SECOND SILVER COLOR SHADE OF TRAIN 01 TO TRAIN 02
+    //y axis value 1.5 as the rest of the code as done
+
+    //silver color second 
+
+    glPushMatrix();
+
+    glTranslatef(2 * 27, 1.5, 0);
+
+    glColor3f(0.85, 0.9, 0.91);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(69.7, 35.8);
+    glVertex2f(69.7, 36.7);
+    glVertex2f(76.8, 36.7);
+    glVertex2f(76.8, 35.8);
+
+    glEnd();
+
+    //silver color third
+
+    glColor3f(0.85, 0.9, 0.91);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(78, 35.8);
+    glVertex2f(78, 36.7);
+    glVertex2f(83.3, 36.7);
+    glVertex2f(83.3, 35.8);
+
+    glEnd();
+
+    //USING THE CODE OF SILVE COLOR THIRD TO DRAW THE FIRST SILVER COLOR OF TRAIN 02
+    // JUST TRANSLATIN IN X AXIS BY NEGATIVE VALUE
+
+    glPushMatrix();
+    glTranslatef(-15, 0, 0);
+
+    glColor3f(0.85, 0.9, 0.91);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(78, 35.8);
+    glVertex2f(78, 36.7);
+    glVertex2f(83.3, 36.7);
+    glVertex2f(83.3, 35.8);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
+    ////
+
 
 
     glPopMatrix();
@@ -12537,7 +12788,7 @@ void helicopter() {
 
 
     //TOP ROUNDED PORTION OF THE HELICOPTER
-    glColor3f(0, 1, 0);
+    glColor3f(0.98, 0.93, 0.94);
     glBegin(GL_POLYGON);
     glVertex2f(105, 74);
     glVertex2f(105.8, 75.2);
@@ -12549,8 +12800,29 @@ void helicopter() {
     glEnd();
 
 
+    //RIGHT SIDE REDISH AREA OF THE TOP ROUNDED PROTION OF THE HELICOPTER
+    glColor3f(0.82, 0.13, 0.2);
+    glBegin(GL_POLYGON);
+    glVertex2f(109, 74);
+    glVertex2f(109.5, 74.8);
+    glVertex2f(109.5, 75.3);
+    glVertex2f(109.2, 76);
+    glVertex2f(112, 76);
+    glVertex2f(114.2, 75.2);
+    glVertex2f(115, 74);
+
+    glEnd();
+
+
+
     //FOUR FAN'S AT THE BACK OF THE HELICOPTER
     //PRINTING FROM TOP TO RIGHT
+
+    glPushMatrix();
+
+    glTranslatef(125.42, 76.54, 0);
+    glRotatef(_angle2, 0, 0, 1);
+    glTranslatef(-125.42, -76.54, 0);
 
     //1ST FAN
     glColor3f(0.98, 0.93, 0.94);
@@ -12589,6 +12861,9 @@ void helicopter() {
     glVertex2f(123.1, 77.3);
     glVertex2f(125.15, 76.75);
     glEnd();
+
+    glPopMatrix();
+
 
 
     //CIRCLES AT THE BACK OF THE HELICOPTER
@@ -12984,12 +13259,388 @@ void helicopter() {
     glPopMatrix();
 
 
+    //NOW CODING THE BOTTOM PART OF THE HELICOPTER
+
+
+    //BOTTOM ROUNDED AREA
+    glColor3f(0.91, 0.76, 0.81);
+    glBegin(GL_POLYGON);
+    glVertex2f(104.3, 68);
+    glVertex2f(104, 67.6);
+    glVertex2f(104, 67.2);
+    glVertex2f(104.4, 66.8);
+    glVertex2f(113.8, 66.8);
+    glVertex2f(114.2, 67.2);
+    glVertex2f(113.8, 68);
+    glEnd();
+
+    //BOTTOM RECTANGLE PART (FROM WHERE WATER WILL BE FALLING)
+
+    glColor3f(0.98, 0.93, 0.94);
+    glBegin(GL_POLYGON);
+    glVertex2f(105.6, 66.2);
+    glVertex2f(105.6, 67.6);
+    glVertex2f(113.2, 67.6);
+    glVertex2f(113.2, 66.2);
+    glEnd();
+
+
+    //TWO BLACK SQUARES INSIDE THE BOTTOM RECTANGLE
+    //FIRST BLACK SQUARE
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(105.8, 66.4);
+    glVertex2f(105.8, 66.6);
+    glVertex2f(106, 66.6);
+    glVertex2f(106, 66.4);
+    glEnd();
+
+    //SECOND BLACK SQUARE
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(112.8, 66.4);
+    glVertex2f(112.8, 66.6);
+    glVertex2f(113, 66.6);
+    glVertex2f(113, 66.4);
+    glEnd();
+
+    //TOW HORIZONTAL RECTANGLE ABOVE THE BOTTOM RECTANGLE
+
+
+    //FIRST HORIZONTAL RECTANGLE
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(106, 67.6);
+    glVertex2f(106, 67.8);
+    glVertex2f(106.6, 67.8);
+    glVertex2f(106.6, 67.6);
+    glEnd();
+
+
+    //SECOND HORIZONTAL RECTANLGE
+
+    glColor3f(0, 0, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(112.2, 67.6);
+    glVertex2f(112.2, 67.8);
+    glVertex2f(112.8, 67.8);
+    glVertex2f(112.8, 67.6);
+    glEnd();
+
+    //NOW CODING THE WHEELS OF THE HELICOPTER
+    glPushMatrix();
+    glTranslatef(1, 0, 0);
+    //REDISH AREA OF LEFT WHEEL
+    glColor3f(0.82, 0.13, 0.2);
+    glBegin(GL_POLYGON);
+    glVertex2f(102.4, 68);
+    glVertex2f(102.4, 67.2);
+    glVertex2f(102.5, 67);
+    glVertex2f(102.7, 67);
+    glVertex2f(102.8, 67.2);
+    glVertex2f(102.8, 68);
+    glEnd();
+
+    //BLACKISH AREA BELOW THE REDISH AREA OF LEFT WINDOW
+    glColor3f(0.13, 0.25, 0.36);
+    glBegin(GL_POLYGON);
+    glVertex2f(102.5, 66.5);
+    glVertex2f(102.5, 67);
+    glVertex2f(102.7, 67);
+    glVertex2f(102.7, 66.5);
+
+    glEnd();
+
+
+    //BLACKISH WHEEL OF LEFT WHEEL
+
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 360;i++)
+    {
+        glColor3f(0.13, 0.25, 0.36);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 0.5121788939664;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 102.6, y + 66.1);
+    }
+
+    glEnd();
+
+    //WHITISH SMALL CIRLCE IN THE MIDDLE OF THE BLAKISH WHEEL
+
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 360;i++)
+    {
+        glColor3f(0.69, 0.76, 0.78);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 0.2546297078227;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 102.6, y + 66.1);
+    }
+
+    glEnd();
+
+    //BLACKISH ROUNDED CURVE IN THE LEFT WHEEL
+
+    glLineWidth(0.5);
+    glColor3f(0.13, 0.25, 0.36);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(102.4, 67.2);
+    glVertex2f(102.2, 67.1);
+
+    glVertex2f(102.2, 67.1);
+    glVertex2f(102.1, 67);
+
+    glVertex2f(102.1, 67);
+    glVertex2f(102.05, 66.9);
+
+    glVertex2f(102.05, 66.9);
+    glVertex2f(102.05, 66.75);
+
+    glVertex2f(102.05, 66.75);
+    glVertex2f(102.2, 66.6);
+
+    glVertex2f(102.2, 66.6);
+    glVertex2f(102.5, 66.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+
+    //NOW CODING THE SECOND RIGHT WHEEL OF THE HELICOPTER
+    //USING THE CODES OF THE LEFT WHEEL
+    //JUST TRANSLATING IN X AXIS
+
+    glPushMatrix();
+    glTranslatef(11, 0, 0);
+
+    glPushMatrix();
+    glTranslatef(1, 0, 0);
+    //REDISH AREA OF LEFT WHEEL
+    glColor3f(0.82, 0.13, 0.2);
+    glBegin(GL_POLYGON);
+    glVertex2f(102.4, 68);
+    glVertex2f(102.4, 67.2);
+    glVertex2f(102.5, 67);
+    glVertex2f(102.7, 67);
+    glVertex2f(102.8, 67.2);
+    glVertex2f(102.8, 68);
+    glEnd();
+
+    //BLACKISH AREA BELOW THE REDISH AREA OF LEFT WINDOW
+    glColor3f(0.13, 0.25, 0.36);
+    glBegin(GL_POLYGON);
+    glVertex2f(102.5, 66.5);
+    glVertex2f(102.5, 67);
+    glVertex2f(102.7, 67);
+    glVertex2f(102.7, 66.5);
+
+    glEnd();
+
+
+    //BLACKISH WHEEL OF LEFT WHEEL
+
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 360;i++)
+    {
+        glColor3f(0.13, 0.25, 0.36);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 0.5121788939664;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 102.6, y + 66.1);
+    }
+
+    glEnd();
+
+    //WHITISH SMALL CIRLCE IN THE MIDDLE OF THE BLAKISH WHEEL
+
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 360;i++)
+    {
+        glColor3f(0.69, 0.76, 0.78);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 0.2546297078227;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 102.6, y + 66.1);
+    }
+
+    glEnd();
+
+    //BLACKISH ROUNDED CURVE IN THE LEFT WHEEL
+
+    glLineWidth(0.5);
+    glColor3f(0.13, 0.25, 0.36);
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(102.4, 67.2);
+    glVertex2f(102.2, 67.1);
+
+    glVertex2f(102.2, 67.1);
+    glVertex2f(102.1, 67);
+
+    glVertex2f(102.1, 67);
+    glVertex2f(102.05, 66.9);
+
+    glVertex2f(102.05, 66.9);
+    glVertex2f(102.05, 66.75);
+
+    glVertex2f(102.05, 66.75);
+    glVertex2f(102.2, 66.6);
+
+    glVertex2f(102.2, 66.6);
+    glVertex2f(102.5, 66.5);
+
+    glEnd();
+
+    glPopMatrix();
+
+    glPopMatrix();
 
 
 
+    //NOW CODING THE TOP MAIN FAN  PORTION OF THE HELICOPTER
+    //VERTICLE RECTANGLE TYPE AREA BLACKISH BELOW THE REDISH ROUNDED AREA
+
+    glColor3f(0.13, 0.25, 0.36);
+    glBegin(GL_POLYGON);
+    glVertex2f(109.7, 76);
+    glVertex2f(109.7, 76.8);
+    glVertex2f(110.3, 76.8);
+    glVertex2f(110.3, 76);
+
+    glEnd();
+
+
+    //HORIZONTAL RECTANGLE JUST BELOW THE REDISH ROUNDED AREA
+    glBegin(GL_POLYGON);
+    glVertex2f(109.4, 76.8);
+    glVertex2f(109.4, 77);
+    glVertex2f(110.6, 77);
+    glVertex2f(110.6, 76.8);
+
+    glEnd();
+
+
+    //NOW CODING THE REDISH ROUNDED AREA
+    glColor3f(0.82, 0.13, 0.2);
+    glBegin(GL_POLYGON);
+    glVertex2f(109.4, 77);
+    glVertex2f(109.45, 77.25);
+    glVertex2f(109.6, 77.4);
+    glVertex2f(110.4, 77.4);
+    glVertex2f(110.55, 77.25);
+    glVertex2f(110.6, 77);
+
+    glEnd();
+
+
+
+    glPushMatrix();
+    glTranslatef(110, 77, 0);
+    glRotatef(_angle1, 0, 1, 0);
+    glTranslatef(-110, -77, 0);
+
+
+    //NOW CODING THE MAIN BIG FAN OF THE HELICOPTER
+    glColor3f(0.13, 0.25, 0.36);
+    glBegin(GL_POLYGON);
+    glVertex2f(106.8, 76.8);
+    glVertex2f(106.5, 76.5);
+    glVertex2f(97.5, 76.5);
+    glVertex2f(98, 77);
+    glVertex2f(113.2, 77);
+    glVertex2f(113.2, 76.8);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(113.2, 76.8);
+    glVertex2f(113.2, 77);
+    glVertex2f(122, 77);
+    glVertex2f(122.5, 76.5);
+    glVertex2f(113.5, 76.5);
+    glVertex2f(113.2, 76.8);
+
+    glEnd();
+
+    glPopMatrix();
 
 
 }
+
+
+
+void sky() {
+    // glColor3f(0.46, 0.72, 0.83);
+    glColor3f(1, 1, 1);
+    glBegin(GL_POLYGON);
+    glVertex2f(0, 21.9);
+    glVertex2f(0, 80 + 3);
+    glVertex2f(130, 80 + 3);
+    glVertex2f(130, 21.9);
+
+    glEnd();
+
+
+    ApplyTexture(0, 21.9, 0, 80 + 3, 130, 80 + 3, 130, 21.9, textures[2].textureID);
+
+
+}
+
+
+void rotate_fan1(int value) {
+
+    _angle1 += 15.0f;
+    _angle2 += 30.0f;
+    if (_angle1 > 360.0)
+    {
+        _angle1 -= 360;
+    }
+
+    if (_angle2 > 360.0)
+    {
+        _angle2 -= 360;
+    }
+    glutPostRedisplay(); //Notify GLUT that the display has changed
+
+    glutTimerFunc(20, rotate_fan1, 0); //Notify GLUT to call update again in 25 milliseconds
+}
+
+
+
+void move_helicopter(int value) {
+    if (countfire > 15 && showfire) {
+        if (_movehelicopter > -50) {
+            //_movehelicopter = 0;
+            _movehelicopter -= 0.5;
+        }
+    }
+    if (!showfire) {
+        _movehelicopter = 0;
+    }
+
+    if (vanishfire < 7) {
+        _movehelicopter -= 0.5;
+
+    }
+
+    //cout << _movehelicopter << endl;
+
+    glutPostOverlayRedisplay();
+    glutTimerFunc(20, move_helicopter, 0);
+}
+
 
 
 void wave_fire(int value) {
@@ -13056,25 +13707,6 @@ void change_wing(int value) {
 
 }
 
-
-// This function is for the movement of the birds.. The flying animation...
-void fly(int value) {
-
-    if (_isflybird)
-    {
-        _move -= 0.5;
-        //cout << _move << endl;
-
-        if (_move < -150) {
-            _move = 0;
-        }
-    }
-
-    glutPostRedisplay();
-    glutTimerFunc(20, fly, 0);
-
-}
-
 void PlayMusic_run(const string& path) {
     // if (_ismovetrain)
     PlaySound(path.c_str(), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
@@ -13086,6 +13718,39 @@ void PlayMusic_brake(const string& path) {
     PlaySound(path.c_str(), NULL, SND_FILENAME | SND_ASYNC);
     glutPostRedisplay();
 }
+
+void PlayMusic_birds(const string& path) {
+    // if (_ismovetrain)
+    PlaySound(path.c_str(), NULL, SND_FILENAME | SND_ASYNC);
+    //glutPostRedisplay();
+}
+
+
+// This function is for the movement of the birds.. The flying animation...
+void fly(int value) {
+
+    if (_isflybird)
+    {
+        _move -= 0.5;
+        //cout << _move << endl;
+
+        if (_move == -0.5) {
+            // PlayMusic_birds("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/BIRDS_CHIRPING.wav");
+            sndPlaySound("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/BIRDS_CHIRPING.wav", SND_ASYNC);
+
+        }
+        if (_move < -150) {
+            _move = 0;
+        }
+
+        glutPostRedisplay();
+    }
+
+    glutTimerFunc(20, fly, 0);
+
+}
+
+
 
 //This function is for the movement of the train..
 void _move_train(int value) {
@@ -13139,6 +13804,7 @@ void _move_train_keypress(unsigned char key, int x, int y) {
     case 'f':
         showfire = !showfire;
         countfire = 0;
+        vanishfire = 20;
     }
 
     glutPostRedisplay();
@@ -13149,6 +13815,11 @@ void fire_animation(int value) {
     if (showfire) {
         countfire++;
     }
+
+    if (countfire > 20) {
+        vanishfire--;
+    }
+    //cout << vanishfire << endl;
 
     glutPostRedisplay();
     glutTimerFunc(1000, fire_animation, 0);
@@ -13177,14 +13848,15 @@ void fire_animation(int value) {
 
 void display() {
 
-    glClearColor(0.46, 0.72, 0.83, 1.0f); // Set background color to black and opaque
+    // glClearColor(0.46, 0.72, 0.83, 1.0f); // Set background color to black and opaque
+    glClearColor(1, 1, 1, 1.0f); // Set background color to black and opaque
     glClear(GL_COLOR_BUFFER_BIT);
-
 
 
 
     glPushMatrix();
     glTranslatef(0, -3, 0);
+    sky();
 
     building_02(); // ID - 18
     building_01(); // ID - 17
@@ -13204,18 +13876,18 @@ void display() {
     //first fire shape
     if (showfire) {
 
-        if (countfire > 1)
+        if (countfire > 1 && vanishfire > 15)
             fire();
 
         //NOW PRINTING REST OF THE FIRE SHAPE
-        if (countfire > 3) {
+        if (countfire > 3 && vanishfire > 15) {
             glPushMatrix();
             glTranslatef(-5, 0, 0);
             fire();
             glPopMatrix();
         }
 
-        if (countfire > 5) {
+        if (countfire > 5 && vanishfire > 15) {
 
             glPushMatrix();
             glTranslatef(-10, 0, 0);
@@ -13227,20 +13899,20 @@ void display() {
 
         glPushMatrix();
         glTranslatef(0, 6, 0);
-        if (countfire > 7) {
+        if (countfire > 7 && vanishfire > 17) {
             fire();
 
         }
 
 
-        if (countfire > 9) {
+        if (countfire > 9 && vanishfire > 17) {
 
             glPushMatrix();
             glTranslatef(-5, 0, 0);
             fire();
             glPopMatrix();
         }
-        if (countfire > 11) {
+        if (countfire > 11 && vanishfire > 17) {
 
             glPushMatrix();
             glTranslatef(-10, 0, 0);
@@ -13253,20 +13925,20 @@ void display() {
 
         glPushMatrix();
         glTranslatef(0, -6, 0);
-        if (countfire > 13) {
+        if (countfire > 13 && vanishfire > 13) {
             fire();
 
         }
 
 
-        if (countfire > 14) {
+        if (countfire > 14 && vanishfire > 13) {
 
             glPushMatrix();
             glTranslatef(-5, 0, 0);
             fire();
             glPopMatrix();
         }
-        if (countfire > 15) {
+        if (countfire > 15 && vanishfire > 13) {
 
             glPushMatrix();
             glTranslatef(-10, 0, 0);
@@ -13279,20 +13951,20 @@ void display() {
 
         glPushMatrix();
         glTranslatef(0, -12, 0);
-        if (countfire > 16) {
+        if (countfire > 16 && vanishfire > 11) {
             fire();
 
         }
 
 
-        if (countfire > 16) {
+        if (countfire > 16 && vanishfire > 11) {
 
             glPushMatrix();
             glTranslatef(-5, 0, 0);
             fire();
             glPopMatrix();
         }
-        if (countfire > 16) {
+        if (countfire > 16 && vanishfire > 11) {
 
             glPushMatrix();
             glTranslatef(-10, 0, 0);
@@ -13306,20 +13978,20 @@ void display() {
 
         glPushMatrix();
         glTranslatef(0, -18, 0);
-        if (countfire > 17) {
+        if (countfire > 17 && vanishfire > 9) {
             fire();
 
         }
 
 
-        if (countfire > 17) {
+        if (countfire > 17 && vanishfire > 9) {
 
             glPushMatrix();
             glTranslatef(-5, 0, 0);
             fire();
             glPopMatrix();
         }
-        if (countfire > 17) {
+        if (countfire > 17 && vanishfire > 9) {
 
             glPushMatrix();
             glTranslatef(-10, 0, 0);
@@ -13337,7 +14009,9 @@ void display() {
     building_10(); // ID - 26
     glPopMatrix();
 
-
+    if (countfire > 18 && vanishfire > 7)
+        //if (_movehelicopter == -50)
+        drawRain();
 
     //TRANSLATING THE TRAIN, TRAIN PLATFORM, ROAD, POND IN -7 VALUE IN Y AXIS
     glPushMatrix();
@@ -13363,14 +14037,14 @@ void display() {
 
 
     //This push_pop matrix is for the train movement animation
-    glPushMatrix();
+   // glPushMatrix();
 
-    glTranslatef(80, 0, 0);
-    glTranslatef(_movetrain, 0, 0);
+    // glTranslatef(80, 0, 0);
+    // glTranslatef(_movetrain, 0, 0);
     train01(); // ID - 14
     train02(); // ID - 15
     train03(); // ID - 16
-    glPopMatrix();
+    //glPopMatrix();
 
 
 
@@ -13393,13 +14067,15 @@ void display() {
 
     glPushMatrix();
     glScalef(0.5, 0.5, 1);
-    glTranslatef(115, 60, 0);
+    glTranslatef(165, 75, 0);
+    glTranslatef(_movehelicopter, 0, 0);
     helicopter();
     glPopMatrix();
 
 
-
     glFlush(); // Render now
+
+    glutSwapBuffers();
 
 
 
@@ -13415,11 +14091,13 @@ int main(int argc, char** argv) {
         (glutGet(GLUT_SCREEN_HEIGHT) - 950) / 2);
 
     glutCreateWindow("Futureistic city"); // Create a window with the given title
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
+    init();
+    //glClearColor(1.0f, 1.0f, 1.0f, 1.0f); // Set background color to black and opaque
 
 
     loadImageAndStore("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/grass.bmp");
     loadImageAndStore("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/road.bmp");
+    loadImageAndStore("E:/SPRING 23-24/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/sky06.bmp");
 
 
     glutDisplayFunc(display); // Register display callback handler for window re-paint
@@ -13431,6 +14109,9 @@ int main(int argc, char** argv) {
     glutTimerFunc(150, wave_fire, 0); //Notify GLUT to call update again in 25 milliseconds
     glutTimerFunc(20, zoom_fire, 0); //Notify GLUT to call update again in 25 milliseconds
     glutTimerFunc(1000, fire_animation, 0);
+    glutTimerFunc(20, rotate_fan1, 0); //Notify GLUT to call update again in 25 milliseconds
+    glutTimerFunc(20, move_helicopter, 0);
+    glutTimerFunc(10, update, 0);
 
 
     glutKeyboardUpFunc(_move_train_keypress);
