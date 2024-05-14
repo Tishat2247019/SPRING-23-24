@@ -1384,8 +1384,12 @@ void train02() {
 
     glPopMatrix();
 
+
+
     glPopMatrix();
     ////
+    staticText("DESIGNED & CODED BY", 92, 39, 0.009, 1.5, 0, 0, 0);
+    staticText("MD. ABU TOWSIF", 95, 36, 0.009, 1.5, 0, 0, 0);
 
 
     glPopMatrix();
@@ -13599,6 +13603,743 @@ void sky() {
 }
 
 
+
+void circle_tree(float radius, float xc, float yc, float r, float g, float b)
+{
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 200;i++)
+    {
+        glColor3f(r, g, b);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = radius;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + xc, y + yc);
+    }
+    glEnd();
+}
+
+void circle_tree_leaf(float radius, float xc, float yc, float r, float g, float b, int ii, int jj, int us)
+{
+
+    glBegin(GL_POINTS);
+    float pi = 3.1416;
+    for (int i = ii; i < jj; i++)
+    {
+        glColor3f(r, g, b);
+        float A;
+        if (us == 1) {
+            A = (i * pi) / jj;
+        }
+        else {
+            A = (i * 2 * pi) / jj;
+        }
+
+        float x = radius * cos(A);
+        float y = radius * sin(A);
+        glVertex2f(x + xc, y + yc);
+    }
+    glEnd();
+}
+
+
+
+
+void tree_01() {
+
+    /* circle_tree(1.34536240, 7.4, 27.4, 0, 1, 0);
+    circle_tree(1.34536240, 6, 28.5, 0, 1, 0);
+    circle_tree(1.34536240, 5, 30, 0, 1, 0);
+    circle_tree(1.34536240, 4.5680291275155, 32.0043448483279, 0, 1, 0);
+    circle_tree(1.34536240, 5, 34, 0, 1, 0);
+    circle_tree(1.34536240, 6.1909757057146, 35.8278670002782, 0, 1, 0);
+    circle_tree(1.34536240, 7.9276388328357, 36.2879102127606, 0, 1, 0);
+
+
+    circle_tree(1.34536240, 13.7410741843323, 36.3749187118342, 0, 1, 0);
+    circle_tree(1.34536240, 14.6902740563269, 34.654756808448, 0, 1, 0);
+    circle_tree(1.34536240, 15.1733194294334, 32.8490871994546, 0, 1, 0);
+    circle_tree(1.34536240, 15.3801729540427, 30.7805594577581, 0, 1, 0);
+    circle_tree(1.34536240, 15.3801729540427, 30.7805594577581, 0, 1, 0);
+
+    //
+
+    circle_tree(0.849280319, 9.3849213471753, 36.2652912570955, 0, 1, 0);
+
+    //
+    circle_tree(1.22414222669, 10.6878981077301, 37.0699836739806, 0, 1, 0);
+    circle_tree(1.22414222669, 12.1314785121354, 37.5289157434802, 0, 1, 0);
+
+
+    //
+
+    circle_tree(1.0010888654901, 14.8835797468066, 28.9087705164495, 0, 1, 0);
+    circle_tree(1.0010888654901, 14.3744546333287, 27.6215851323334, 0, 1, 0);
+    circle_tree(1.0010888654901, 13.3652279932932, 26.9752264977039, 0, 1, 0);
+    circle_tree(1.0010888654901, 11.8838490050412, 26.3638932345904, 0, 1, 0);
+    circle_tree(1.0010888654901, 10.502427726449, 26.5088865346398, 0, 1, 0);
+    circle_tree(1.0010888654901, 9.1122501049779, 26.799518955311, 0, 1, 0);
+
+
+    circle_tree(5.3060466689, 10.7267674451223, 31.7585937438858, 0, 1, 0); */
+
+
+    glPushMatrix();
+    glTranslatef(0, -1.5, 0);
+
+    circle_tree(1.978286377, 7.2400225968382, 27.5955279371978, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 5.8535517694358, 29.8174363144452, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 5.3380690259144, 32.5015016341601, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 6.2801581778673, 35.4699712261626, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 10.6528738642902, 37.1586215928706, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 12.608153236268, 38.3140139490393, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 15.1989726129297, 36.3489163288726, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 16.6609141163673, 34.0510786531141, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 16.7533778623229, 31.0364580817891, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 15.503336956217, 27.9921942391299, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 13.3191639169871, 26.892150700686, 0.55, 0.57, 0.09);
+    circle_tree(1.978286377, 10.2795932569127, 26.9200677905146, 0.55, 0.57, 0.09);
+
+
+    circle_tree(1.377951522914, 8.6087181572226, 35.4344206921267, 0.55, 0.57, 0.09);
+
+
+    circle_tree(5.28069547, 11.6014149525288, 31.919713021566, 0.55, 0.57, 0.09);
+
+
+    //tree leafs
+
+
+    circle_tree_leaf(1.978286377, 8.5163239098084, 33.9199531415653, 0.06, 0.43, 0.14, 40, 120, 1);
+    circle_tree_leaf(1.978286377, 11.1558290630765, 36.2177328533492, 0.06, 0.43, 0.14, 0, 100, 1);
+    circle_tree_leaf(1.978286377, 14.3413420650764, 35.0612090245976, 0.06, 0.43, 0.14, 0, 50, 1);
+    circle_tree_leaf(1.978286377, 12, 34, 0.06, 0.43, 0.14, 0, 100, 1);
+    circle_tree_leaf(1.978286377, 14.3819218485414, 32.7684512588267, 0.06, 0.43, 0.14, 0, 130, 1);
+    circle_tree_leaf(1.978286377, 8.5181431378536, 31.28728916235547, 0.06, 0.43, 0.14, 40, 120, 1);
+    circle_tree_leaf(1.978286377, 14.4022117402738, 29.9075765245464, 0.06, 0.43, 0.14, 120, 200, 2);
+
+
+    circle_tree_leaf(1.978286377, 10.8514806870892, 30.1162707469795, 0.06, 0.43, 0.14, 0, 100, 1);
+    circle_tree_leaf(1.978286377, 12.8514806870892, 30.1162707469795, 0.06, 0.43, 0.14, 0, 100, 1);
+
+    glPopMatrix();
+
+
+    //tree wood brown color
+
+    glColor3f(0.29, 0.14, 0.02);
+    glBegin(GL_POLYGON);
+
+    glVertex2f(10.32, 21.9);
+    glVertex2f(10.16, 24.2);
+    glVertex2f(10.58, 25.14);
+    glVertex2f(11.32, 25);
+    glVertex2f(11.52, 24.1);
+    glVertex2f(11.66, 22.96);
+    glVertex2f(11.74, 21.9);
+
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+
+    glVertex2f(14, 27.6);
+    glVertex2f(13.6, 27.2);
+    glVertex2f(13.04, 26.12);
+    glVertex2f(13.4, 26);
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glVertex2f(13.04, 26.12);
+    glVertex2f(11.52, 24.1);
+    glVertex2f(11.66, 22.96);
+    glVertex2f(12.04, 24.32);
+    glVertex2f(13.4, 26);
+
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+    glVertex2f(10.99, 26.3);
+    glVertex2f(10.58, 25.14);
+    glVertex2f(11.32, 25);
+    glVertex2f(11.54, 26.36);
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(12.7, 28.2);
+    glVertex2f(11.84, 27.53);
+    glVertex2f(10.99, 26.3);
+    glVertex2f(11.54, 26.36);
+
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(10.06, 26.68);
+    glVertex2f(10.58, 25.14);
+    glVertex2f(10.99, 26.3);
+    glVertex2f(10.64, 27.28);
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(10.28, 27.92);
+    glVertex2f(10.06, 26.68);
+    glVertex2f(10.64, 27.28);
+    glVertex2f(10.72, 27.86);
+
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2f(9.74, 28.96);
+    glVertex2f(10.28, 27.92);
+    glVertex2f(10.72, 27.86);
+    glVertex2f(10, 29);
+
+    glEnd();
+
+
+
+
+}
+
+
+
+void tree_02() {
+
+    glPushMatrix();
+
+
+    //TRANSLATING TREE 02 TO -2 Y AXIS TO LOOK MORE ACCURATE AND BEAUTIFUL
+    glTranslatef(0, -2, 0);
+
+
+    //LOWER PORTION OF TREE O2
+
+    //LEFT LOWER PORTION
+    glColor3f(0, 0.5, 0.4);
+    glBegin(GL_POLYGON);
+    glVertex2f(72, 32.56);
+    glVertex2f(72.3, 32.28);
+    glVertex2f(72.7, 32.06);
+    glVertex2f(75.22, 32.06);
+    glVertex2f(75.64, 32.28);
+    glVertex2f(76, 32.6);
+    glVertex2f(76, 33.5);
+    glVertex2f(72, 33.5);
+
+    glEnd();
+
+
+    //RIGHT LOWER PORTION
+    glBegin(GL_POLYGON);
+    glVertex2f(77.7, 33.5);
+    glVertex2f(77.6, 33.3);
+    glVertex2f(77.6, 32.7);
+    glVertex2f(77.7, 32.3);
+    glVertex2f(78, 32.06);
+    glVertex2f(81.3, 32.06);
+    glVertex2f(81.6, 32.3);
+    glVertex2f(81.7, 32.7);
+    glVertex2f(81.7, 33.3);
+    glVertex2f(81.3, 33.7);
+    glVertex2f(81.3, 33.7);
+
+    glEnd();
+
+
+    //UPPER PORTION BACK MORE DEEPER
+
+    glBegin(GL_POLYGON);
+    glVertex2f(71.6, 36.5);
+    glVertex2f(71.3, 36.3);
+    glVertex2f(71.1, 36.1);
+    glVertex2f(71, 35.85);
+    glVertex2f(71, 34.15);
+    glVertex2f(71.1, 33.9);
+    glVertex2f(71.3, 33.7);
+    glVertex2f(71.6, 33.5);
+    glVertex2f(81, 33.5);
+    glVertex2f(81.3, 33.7);
+    glVertex2f(81.4, 33.9);
+    glVertex2f(81.5, 34.15);
+    glVertex2f(81.5, 35.85);
+    glVertex2f(81.4, 36.1);
+    glVertex2f(81, 36.5);
+
+    glEnd();
+
+    //UPPER PORTOIN MAIN MORE LIGHTER PORTION
+    glColor3f(0.04, 0.66, 0.52);
+    glBegin(GL_POLYGON);
+    glVertex2f(71.6, 36.5);
+    glVertex2f(71.3, 36.3);
+    glVertex2f(71.1, 36.1);
+    glVertex2f(71, 35.85);
+    glVertex2f(71, 34.15);
+    glVertex2f(71.1, 33.9);
+    glVertex2f(71.3, 33.7);
+    glVertex2f(71.6, 33.5);
+    glVertex2f(76.6, 33.5);
+    glVertex2f(80, 34.5);
+    glVertex2f(80.5, 35);
+    glVertex2f(81, 36.5);
+
+    glEnd();
+
+
+
+
+    //THREE CIRCLES ABOVE THE MAIN BIG PORTION
+
+
+
+    //3RD SMALL CIRCLE ABOVE THE TWO BIG CIRLCES
+
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 200;i++)
+    {
+        glColor3f(0.05, 0.73, 0.48);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 1.2590895528;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 76.4616392073074, y + 38.8262048128104);
+    }
+    glEnd();
+
+
+    //2ND BIG CIRCLE
+
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 200;i++)
+    {
+        glColor3f(0.05, 0.73, 0.48);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 2.4515301344263;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 78.5, y + 37);
+    }
+    glEnd();
+
+
+    //FIRST BIG CIRCLE
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 200;i++)
+    {
+        glColor3f(0.07, 0.8, 0.51);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 2.4515301344263;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 74, y + 37);
+    }
+    glEnd();
+
+
+    //MORE LIGHTER COLOR CIRCLE OVER THE FIRST BIG CIRCLE
+    glBegin(GL_POLYGON);// Draw a Red 1x1 Square centered at origin
+    for (int i = 0;i < 200;i++)
+    {
+        glColor3f(0.2, 0.83, 0.58);
+        float pi = 3.1416;
+        float A = (i * 2 * pi) / 200;
+        float r = 1.44902023;
+        float x = r * cos(A);
+        float y = r * sin(A);
+        glVertex2f(x + 73.8, y + 37.8);
+    }
+    glEnd();
+
+
+
+    //BELOW BROWND KANDO OF TREE 03
+    glColor3f(0.43, 0.29, 0.28);
+    glBegin(GL_POLYGON);
+    glVertex2f(76, 21.9);
+    glVertex2f(76, 33.5);
+    glVertex2f(76.6, 33.5);
+    glVertex2f(76.6, 21.9);
+    glEnd();
+
+
+    //RIGHT TRIANGLE TYPE EXTENSION
+    glBegin(GL_POLYGON);
+    glVertex2f(79.4, 33.4);
+    glVertex2f(76.6, 27.9);
+    glVertex2f(76.6, 26.9);
+    glEnd();
+
+
+    //LEFT TRIANGLE TYPE EXTENSION
+
+    glBegin(GL_POLYGON);
+    glVertex2f(73.6, 33.4);
+    glVertex2f(76, 28.8);
+    glVertex2f(76, 29.6);
+    glEnd();
+
+    //BEAUTIFICATOINS WHITE DOTS
+
+    circle_tree(0.3, 73.81122716838, 38.4727225768801, 1, 1, 1);
+    circle_tree(0.3, 72.7037208494535, 37.7068937393247, 1, 1, 1);
+    circle_tree(0.3, 72.7508487779184, 35.9160324576565, 1, 1, 1);
+    circle_tree(0.3, 74.3296343814946, 35.4683171372395, 1, 1, 1);
+    circle_tree(0.3, 75.4842686288862, 36.0691982251676, 1, 1, 1);
+    circle_tree(0.3, 75.4017947540725, 37.9660973458819, 1, 1, 1);
+    circle_tree(0.3, 74, 37, 1, 1, 1);
+
+
+    //NOW PRINTING THE DOTS OF THE SIDE SIDE BIG CIRCLE
+    //JUST TRANSLATING TO X AXIS BY 4 VALUE
+
+    glPushMatrix();
+    glTranslatef(4.5, 0, 0);
+    circle_tree(0.3, 73.81122716838, 38.4727225768801, 1, 1, 1);
+    circle_tree(0.3, 72.7037208494535, 37.7068937393247, 1, 1, 1);
+    circle_tree(0.3, 72.7508487779184, 35.9160324576565, 1, 1, 1);
+    circle_tree(0.3, 74.3296343814946, 35.4683171372395, 1, 1, 1);
+    circle_tree(0.3, 75.4842686288862, 36.0691982251676, 1, 1, 1);
+    circle_tree(0.3, 75.4017947540725, 37.9660973458819, 1, 1, 1);
+    circle_tree(0.3, 74, 37, 1, 1, 1);
+    glPopMatrix();
+
+
+
+    glPopMatrix();
+
+
+}
+
+
+void tree_03() {
+
+    //FIRST BLUE TRIANGLE (FROM BOTTOM);
+    glColor3f(0, 0.4, 0);
+    glBegin(GL_POLYGON);
+    glVertex2f(124, 35);
+    glVertex2f(119.5, 26);
+    glVertex2f(129, 26);
+    glEnd();
+
+    //2ND
+
+    glBegin(GL_POLYGON);
+    glVertex2f(124, 37);
+    glVertex2f(120.4, 29.5);
+    glVertex2f(128, 29.5);
+    glEnd();
+
+    //3RD
+    glBegin(GL_POLYGON);
+    glVertex2f(124, 38.6);
+    glVertex2f(121.2, 32.8);
+    glVertex2f(127, 32.8);
+    glEnd();
+
+    //4TH
+    glBegin(GL_POLYGON);
+    glVertex2f(124, 40);
+    glVertex2f(122.2, 36);
+    glVertex2f(125.9, 36);
+    glEnd();
+
+
+
+
+
+
+
+    //DALL'S OF TREE 03
+
+    //01 (STARTING FROM LEFT  THEN RIGHT)
+    glColor3f(0.29, 0.14, 0.02);
+    // glColor3f(0.43, 0.29, 0.28);
+    glBegin(GL_POLYGON);
+    glVertex2f(121.6, 29.2);
+    glVertex2f(123.8, 26.4);
+    glVertex2f(123.8, 27.2);
+    glEnd();
+
+    //02
+    glBegin(GL_POLYGON);
+    glVertex2f(125.8, 31.7);
+    glVertex2f(124, 29.5);
+    glVertex2f(124, 28.4);
+    glEnd();
+
+    //03
+
+    glBegin(GL_POLYGON);
+    glVertex2f(122.6, 33.6);
+    glVertex2f(124, 31.5);
+    glVertex2f(124, 32);
+    glEnd();
+
+    //04
+    glBegin(GL_POLYGON);
+    glVertex2f(125.1, 35.5);
+    glVertex2f(124, 34);
+    glVertex2f(124, 33.4);
+    glEnd();
+
+    //05
+
+    glBegin(GL_POLYGON);
+    glVertex2f(123, 37.1);
+    glVertex2f(124, 35.3);
+    glVertex2f(124, 35.6);
+    glEnd();
+
+    //06
+
+    glBegin(GL_POLYGON);
+    glVertex2f(124.5, 38.4);
+    glVertex2f(124, 37.5);
+    glVertex2f(124, 37.2);
+    glEnd();
+
+
+    //MAIN VERTICLE KANDO OF TREE 03
+    glColor3f(0.29, 0.14, 0.02);
+    // glColor3f(0.43, 0.29, 0.28);
+
+    glBegin(GL_POLYGON);
+    glVertex2f(124, 40);
+    glVertex2f(123.5, 21.9);
+    glVertex2f(124.5, 21.9);
+    glEnd();
+}
+
+
+void tree_04() {
+
+    glPushMatrix();
+    glTranslatef(3, -7, 0);
+    glScalef(1, 1.3, 1);
+
+    tree_03();
+
+
+    glPopMatrix();
+
+}
+
+void tree_05() {
+
+    glPushMatrix();
+    glTranslatef(45, 6.5, 0);
+    glScalef(0.6, 0.7, 1);
+    tree_03();
+
+
+    glPopMatrix();
+
+
+
+}
+
+void tree_06() {
+
+    glPushMatrix();
+    glTranslatef(84, 11, 0);
+    glScalef(0.5, 0.5, 1);
+    tree_02();
+
+    glPopMatrix();
+}
+
+void tree_07() {
+
+    glPushMatrix();
+    glTranslatef(48, 14, 0);
+    glScalef(0.4, 0.4, 1);
+    tree_02();
+
+    glPopMatrix();
+}
+
+
+void tree_08() {
+
+    //MAIN BIG CIRCLE OF SMALL TREE 08 LIKE THE FIRST TREE
+    circle_tree(2.26726732, 48, 26, 0.55, 0.57, 0.09);
+
+    //SMALL CIRCLE'S
+
+    circle_tree(1.148834028, 47.3663855270599, 24.165032917969, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 45.6543150861946, 24.9342298577172, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 44.9628140397705, 26.3155968802804, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 45.5320809709707, 27.7176802478658, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 45.9853861198893, 28.67700044674, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 47.4401793885118, 27.7282222280732, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 48.8000948352677, 28.7507943081919, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 50.0320240553024, 27.2902774319341, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 49.9898164098124, 25.4464140443566, 0.55, 0.57, 0.09);
+    circle_tree(1.148834028, 49.30487881857022, 24.14587152720956, 0.55, 0.57, 0.09);
+
+
+    //KANDO OR TREE 08 BROWN
+
+    //MAIN VERTICLE PORTION
+    glColor3f(0.29, 0.14, 0.02);
+    glBegin(GL_POLYGON);
+    glVertex2f(48, 21.9);
+    glVertex2f(48, 22.64);
+    glVertex2f(48.2, 23.2);
+    glVertex2f(48.8, 23.8);
+    glVertex2f(49.4, 23.5);
+    glVertex2f(49.4, 21.9);
+    glEnd();
+
+    //EXTENSOINS OF THE KANDO (FROM LEFT)
+    //FIRST
+    glBegin(GL_POLYGON);
+    glVertex2f(46.6, 24.6);
+    glVertex2f(48, 22.64);
+    glVertex2f(48.2, 23.2);
+    glEnd();
+
+    //SECOND
+    glBegin(GL_POLYGON);
+    glVertex2f(47.8, 27.6);
+    glVertex2f(48.2, 23.2);
+    glVertex2f(48.8, 23.8);
+    glEnd();
+
+    //THIRD
+    glBegin(GL_POLYGON);
+    glVertex2f(50, 28);
+    glVertex2f(48.8, 23.8);
+    glVertex2f(49.4, 23.5);
+    glEnd();
+
+    //BEATIFICATION SMALL DOTS
+    circle_tree(0.3, 47.3663855270599, 24.165032917969, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 45.6543150861946, 24.9342298577172, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 44.9628140397705, 26.3155968802804, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 45.5320809709707, 27.7176802478658, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 45.9853861198893, 28.67700044674, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 47.4401793885118, 27.7282222280732, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 48.8000948352677, 28.7507943081919, 0.85, 0.11, 0.5);
+    circle_tree(0.3, 50.0320240553024, 27.2902774319341, 00.85, 0.11, 0.55);
+    circle_tree(0.3, 49.9898164098124, 25.4464140443566, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 47.7040567181124, 24.8702153158848, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 46.9728856635631, 25.4987658715499, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 46.7291619787133, 26.2812471755411, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 47.5372984074257, 27.1022111666139, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 48.7302617069536, 26.5506259851119, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 49.063778328327, 25.4987658715499, 0.85, 0.11, 0.55);
+    circle_tree(0.3, 48.7430892693139, 27.5255207245108, 0.85, 0.11, 0.55);
+
+
+
+}
+
+void tree_09() {
+
+    glPushMatrix();
+    glTranslatef(50, 0, 0);
+    tree_08();
+    glPopMatrix();
+}
+
+void trees_back_tree01() {
+    glPushMatrix();
+    glTranslatef(-125, 0, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-121.5, -2, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-118, 0, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-114.5, -4, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-93, 5, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-60, 0, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-25, 2, 0);
+    tree_04();
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-7, 2, 0);
+    tree_04();
+    glPopMatrix();
+
+
+
+}
+
+
+
+void upper_road_area() {
+
+    //green area of upper  area
+
+    glColor3f(0.35, 0.58, 0.19);
+    glBegin(GL_POLYGON);
+    glVertex2f(0, 20.5);
+    glVertex2f(0, 21.9);
+    glVertex2f(130, 21.9);
+    glVertex2f(130, 20.5);
+
+
+    glEnd();
+
+
+    //whitish area under the green area 
+
+    glColor3f(0.84, 0.87, 0.88);
+    glBegin(GL_POLYGON);
+    glVertex2f(0, 19.8);
+    glVertex2f(0, 20.5);
+    glVertex2f(130, 20.5);
+    glVertex2f(130, 19.8);
+
+    glEnd();
+
+    //deep whitish area under the green area
+    glColor3f(0.58, 0.65, 0.65);
+    glBegin(GL_POLYGON);
+    glVertex2f(0, 17.9);
+    glVertex2f(0, 19.8);
+    glVertex2f(130, 19.8);
+    glVertex2f(130, 17.9);
+
+    glEnd();
+
+
+
+}
+
+
 void rotate_fan1(int value) {
 
     _angle1 += 15.0f;
@@ -13858,6 +14599,11 @@ void display() {
     glTranslatef(0, -3, 0);
     sky();
 
+    trees_back_tree01();
+    tree_04();
+    tree_03();
+
+
     building_02(); // ID - 18
     building_01(); // ID - 17
     building_04(); // ID - 20
@@ -13870,6 +14616,8 @@ void display() {
     building_05(); // ID - 21
 
     glPopMatrix();
+
+
 
 
 
@@ -14001,13 +14749,39 @@ void display() {
 
         glPopMatrix();
 
-
-
     }
     glPushMatrix();
     glTranslatef(0, -3, 0);
     building_10(); // ID - 26
+
+
+    glPushMatrix();
+    //TRANSLATING THE FIRST TREE FROM LEFT TO -Y AXIS SO THAT ID DOESN'T COVER THE FIRST BUILDING SO MUCH
+    glTranslated(-7, 0, 0);
+    tree_01();
     glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(-23, -5, 0);
+    glScalef(1.3, 1.3, 0);
+    tree_02();
+    glPopMatrix();
+
+
+    tree_05();
+    tree_06();
+    tree_07();
+    tree_08();
+    tree_09();
+
+    //upper area of road
+    upper_road_area();
+
+
+    glPopMatrix();
+
+
 
     if (countfire > 18 && vanishfire > 7)
         //if (_movehelicopter == -50)
