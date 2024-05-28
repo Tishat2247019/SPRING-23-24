@@ -1,10 +1,4 @@
 /COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/mingw32/
-sky04.bmp
-sky03.bmp
-sky06.bmp
-/COMPUTER GRAPHICS/Computer-Graphics-main/OpenGL Programming/sky03.bmp
-*.bmp
-**/*.bmp
 **/mingw32/
 **/*.zip
 
