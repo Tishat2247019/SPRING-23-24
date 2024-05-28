@@ -18,10 +18,11 @@ Raindrop drops[numDrops];
 // Define the boundaries of the square area
 float minX = 106;
 float maxX = 118;
-float minY = 35;
+float minY = 30;
 float maxY = 72;
 
 void init() {
+
     // glClearColor(0.0, 0.0, 0.0, 0.0);
    // glMatrixMode(GL_PROJECTION);
     // gluOrtho2D(0, winWidth, 0, winHeight);
@@ -38,6 +39,7 @@ void init() {
     }
 }
 
+// ID - 07
 void drawRain() {
     //glPointSize(2.0);
     glLineWidth(1.5);
@@ -65,6 +67,7 @@ void updateRain() {
     glutSwapBuffers();
 }*/
 
+// ID - 69
 void update(int value) {
     updateRain();
     glutPostRedisplay();
